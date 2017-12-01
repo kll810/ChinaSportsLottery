@@ -1,0 +1,1534 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国体育彩票</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 页面基础样式 -->
+    <link href="css/uiStyle.css" rel="stylesheet">
+    <script>
+    /******最完美解决 图片在图片框内按宽高比例自动缩放！！！***/
+    //Img:要放图片的img元素，onload时传参可用this
+    //maxHeight  :img元素的高度，像素（图片框 最大高度）
+    //maxWidth:img元素的宽度，像素（图片框 最大宽度）
+    function AutoSize(Img, maxWidth, maxHeight) {
+        var image = new Image();
+        //原图片原始地址（用于获取原图片的真实宽高，当<img>标签指定了宽、高时不受影响）
+        image.src = Img.src;
+        // 当图片比图片框小时不做任何改变 
+        if (image.width < maxWidth && image.height < maxHeight) {
+            Img.width = image.width;
+            Img.height = image.height;
+        } else //原图片宽高比例 大于 图片框宽高比例,则以框的宽为标准缩放，反之以框的高为标准缩放
+        {
+            if (maxWidth / maxHeight <= image.width / image.height) //原图片宽高比例 大于 图片框宽高比例
+            {
+                Img.width = maxWidth; //以框的宽度为标准
+                Img.height = maxWidth * (image.height / image.width);
+            } else { //原图片宽高比例 小于 图片框宽高比例
+                Img.width = maxHeight * (image.width / image.height);
+                Img.height = maxHeight; //以框的高度为标准
+            }
+        }
+    }
+    </script>
+</head>
+
+<body data-spy="scroll">
+    <!-- min导航 -->
+    <div class="min-nav">
+        <div class="container">
+            <span class="mr10">欢迎您：山东测试账号</span>
+            <a href="#" class="ml10 mr10">修改密码</a>
+            <a href="#" class="ml10 mr10"><i class="fa fa-power-off mr5"></i>退出系统</a>
+            <a href="#" class="ml10 pull-right">加入收藏</a>
+            <span class="pull-right">|</span>
+            <a href="#" class="ml10 mr10 pull-right">设为首页</a>
+        </div>
+    </div>
+    <!-- 长banner -->
+    <div class="banner1">
+        <div class="container"><img src="img/banner2.png" width="100%"></div>
+    </div>
+    <!-- 导航 -->
+    <div class="nav">
+        <div class="container">
+            <!-- 搜索 +logo-->
+            <div class="searchbox">
+                <h1 class="logo">中国体育彩票</h1>
+                <span class="search">
+                    <i class="pa-left"></i>
+                    <input type="text" placeholder="请输入要搜索的游戏编码/名称">
+                    <a href="#"><i></i></a>
+                </span>
+                <div class="phonecode">
+                    <div class="label">客服电话</div>
+                    <b>400-658-5188</b>
+                    <p class="tip">服务时间：8:30-17:30</p>
+                </div>
+            </div>
+            <!-- menu -->
+            <div class="clearfix">
+                <ul class="menulist pull-right">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">订票中心</a></li>
+                    <li><a href="#">活动中心</a></li>
+                    <li><a href="#">交流中心</a></li>
+                    <li><a href="#">我的业绩</a></li>
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="container pr scrollcontainer">
+        <!-- 右侧浮动菜单 -->
+        <div class="pinned">
+            <ul class="toolslist">
+                <li>
+                    <a href="#">
+                        <i class="circular fa fa-qq"></i>
+                        <div class="mt3">QQ群</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="square fa fa-weixin"></i>
+                        <div class="mt3">微信公众号</div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="toolslist nav" id="js-sidertoolmenu">
+                <div class="title">商品区</div>
+                <li>
+                    <a href="#probox1">
+                        <div class="pb10 pt5">2元区</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#probox2">
+                        <div class="pb10 pt5">3元区</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#probox3">
+                        <div class="pb10 pt5">5元区</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#probox4">
+                        <div class="pb10 pt5">10元区</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#probox5">
+                        <div class="pb10 pt5">20元区</div>
+                    </a>
+                </li>
+                <li>
+                    <a href="#probox6">
+                        <div class="pb10 pt5">30元区</div>
+                    </a>
+                </li>
+            </ul>
+            <a href="#" class="goback">
+                <i class="fa fa-chevron-up"></i>
+                <div>顶部</div>
+            </a>
+        </div>
+        <div data-spy="scroll" data-target="#js-sidertoolmenu">
+            <!-- 第一部分 -->
+            <div class="clearfix">
+                <!-- 左侧菜单 -->
+                <div class="col-3-l pr">
+                    <div class="siderbox">
+                        <ul class="sider-menu">
+                            <li class="title">常用功能</li>
+                            <li><a href="#"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="#"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="#"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="#"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="#"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="#"><i class="i6"></i>商品展示</a></li>
+                            <li><a href="#"><i class="i7"></i>订购意向调研</a></li>
+                            <li><a href="#"><i class="i8"></i>销量分析</a></li>
+                            <li><a href="#"><i class="i9"></i>我的排名</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 中间部分 -->
+                <div class="col-3-m">
+                    <!-- banner -->
+                    <div id="myCarousel" class="carousel slide ui-banner-list mt10">
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#myCarousel" data-slide-to="1"></li>
+                            <li data-target="#myCarousel" data-slide-to="2"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner">
+                            <div class="active item">
+                                <img src="img/banner.png">
+                            </div>
+                            <div class="item"><img src="img/banner.png"></div>
+                            <div class="item"><img src="img/banner.png"></div>
+                        </div>
+                        <!-- Carousel nav -->
+                        <a class="carousel-control left" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+                        <a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
+                    </div>
+                    <!-- 新闻 -->
+                    <div class="newbox">
+                        新版体彩网上订票系统上线了...
+                    </div>
+                    <!-- 站点风采 -->
+                    <div class="tabbox mt10">
+                        <h4 class="title">站点风采</h4>
+                        <div class="box">
+                            <span class="prev"><i class="fa fa-chevron-left"></i></span>
+                            <dl id="roll">
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-1.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-2.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-3.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-4.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-1.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-2.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-3.png" alt=""></a>
+                                </dd>
+                                <dd>
+                                    <a href="#"><img src="img/tmp/i-4.png" alt=""></a>
+                                </dd>
+                            </dl>
+                            <span class="next"><i class="fa fa-chevron-right"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧 -->
+                <div class="col-3-r">
+                    <!-- 登陆者信息 -->
+                    <div class="userinfo">
+                        <div class="infobox">
+                            <i class="img"><span class="fa fa-user"></span></i>
+                            <h5 class="title">欢迎您，山东测试账号</h5>
+                            <p class="tip">门店号：370101a01</p>
+                            <p class="tip">地址：济南市某某某某</p>
+                        </div>
+                        <p class="tip pb20 pt10 borderbottomdot pl15 f14">您当前可用余额：<b class="text-error">100</b>元</p>
+                        <ul class="linklist clearfix">
+                            <li>
+                                <a href="#">
+                                    <i class="i1"></i>
+                                    <p>购物车</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="i2"></i>
+                                    <p>我的收藏</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="i3"></i>
+                                    <p>我的信息</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="i4"></i>
+                                    <p>我的奖品</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- 消息中心 -->
+                    <div class="newcenter">
+                        <div class="title clearfix borderbottomdot">
+                            消息中心
+                            <a href="#" class="pull-right f14">
+                            全部<i class="fa fa-ellipsis-v ml5"></i>
+                        </a>
+                        </div>
+                        <ul class="list">
+                            <li><a href="#">"双十一"即开票包裹提...<span class="tip">2017-10-11</span></a></li>
+                            <li><a href="#">网点客户互动平台<span class="tip">2017-10-11</span></a></li>
+                            <li><a href="#">即开二代系统上线通知<span class="tip">2017-10-11</span></a></li>
+                        </ul>
+                    </div>
+                    <!-- 下载 -->
+                    <div class="downloadbox">
+                        <i class="code"></i>
+                        <h5 class="title">下载高效订票APP</h5>
+                        <a href="#">
+                            <i class="fa fa-android"></i>
+                            <p>Android</p>
+                        </a>
+                        <a href="#">
+                            <i class="fa fa-apple"></i>
+                            <p>Apple</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!-- 大奖赏析 -->
+            <div class="djsx mt20">
+                <a href="#" class="pa-right f14">全部<i class="fa fa-ellipsis-v ml5"></i></a>
+                <ul class="list">
+                    <li>
+                        <i class="time">
+                        2017/11
+                        <b>20</b>
+                    </i>
+                        <a href="#">
+                            <p class="f14 title">苏州彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</p>
+                            <p class="tip cutword">2元变成5元，苏州彩民小张怎么也没想到，这样的好事可以让自己碰上，原来，5月23日，他和女友一起刮彩票，中了顶呱呱“金豆豆”5万元</p>
+                        </a>
+                    </li>
+                    <li>
+                        <i class="time">
+                        2017/11
+                        <b>20</b>
+                    </i>
+                        <a href="#">
+                            <p class="f14 title">苏州彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</p>
+                            <p class="tip cutword">2元变成5元，苏州彩民小张怎么也没想到，这样的好事可以让自己碰上，原来，5月23日，他和女友一起刮彩票，中了顶呱呱“金豆豆”5万元</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 高效计时 -->
+            <div class="TimingBox">
+                <div class="pull-right">
+                    <span class="f16 vm">
+                    奖品还剩：
+                </span>
+                    <span class="num">60</span>
+                    <span class="f16 vm mr20">
+                    件
+                </span>
+                    <a href="#" class="mr20 vm">查看详情<i class="fa fa-angle-right"></i></a>
+                </div>
+            </div>
+            <!-- 商品区 -->
+            <div class="clearfix">
+                <div class="col-50">
+                    <div class="mr10">
+                        <!-- 新票推荐 -->
+                        <div class="con">
+                            <div class="header s1">
+                                <h6>新票推荐</h6><a href="#" class="pull-right f14">全部<i class="fa fa-ellipsis-v ml5"></i></a>
+                            </div>
+                            <div class="body" style="height:270px;">
+                                <div id="Carousel2" class="carousel slide pro-carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
+                                        <li data-target="#Carousel2" data-slide-to="1"></li>
+                                        <li data-target="#Carousel2" data-slide-to="2"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有12次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">最高奖金100000元</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/675645.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有15次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/34.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿2</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有12次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/2345465.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿2</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">最高奖金100000元</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/2354265.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿2</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有15次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/4354657.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿3</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有12次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/9786756.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿3</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">最高奖金100000元</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>翡翠绿3</p>
+                                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                                        <div class="lighttip">共有15次中奖机会</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#Carousel2" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#Carousel2" data-slide="next">&rsaquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="ml10">
+                        <!-- 热点推荐 -->
+                        <div class="con">
+                            <div class="header s2">
+                                <h6>热点推荐</h6><a href="#" class="pull-right f14">全部<i class="fa fa-ellipsis-v ml5"></i></a>
+                            </div>
+                            <div class="body" style="height:270px;">
+                                <div id="Carousel3" class="carousel slide pro-carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
+                                        <li data-target="#Carousel3" data-slide-to="1"></li>
+                                        <li data-target="#Carousel3" data-slide-to="2"></li>
+                                    </ol>
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+                                        <div class="active item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/098.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金2</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/231.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金2</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/234.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金2</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="item">
+                                            <ul class="prolist clearfix grid-3">
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/254.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金3</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/354.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金3</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">
+                                                        <div class="img"><img src="img/tmp/435.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                                        <p>点石成金3</p>
+                                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                                        <div class="lighttip">中奖率80%</div>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Carousel nav -->
+                                    <a class="carousel-control left" href="#Carousel3" data-slide="prev">&lsaquo;</a>
+                                    <a class="carousel-control right" href="#Carousel3" data-slide="next">&rsaquo;</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 猜你喜欢 -->
+            <div class="con">
+                <div class="header s3">
+                    <h6>猜你喜欢</h6>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clearfix">
+                <div class="col-50">
+                    <div class="mr10">
+                        <!-- 营销活动 -->
+                        <div class="con">
+                            <div class="header s4">
+                                <h6>营销活动</h6><a href="#" class="pull-right f14">全部<i class="fa fa-ellipsis-v ml5"></i></a>
+                            </div>
+                            <div class="body">
+                                <ul class="list">
+                                    <li><a href="#">"双十一"即开票包裹提...<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">网点客户互动平台<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">即开二代系统上线通知<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">"双十一"即开票包裹提...<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">网点客户互动平台<span class="lighttip">2017-10-11</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-50">
+                    <div class="ml10">
+                        <!-- 站点回馈 -->
+                        <div class="con">
+                            <div class="header s5">
+                                <h6>站点回馈</h6><a href="#" class="pull-right f14">全部<i class="fa fa-ellipsis-v ml5"></i></a>
+                            </div>
+                            <div class="body">
+                                <ul class="list">
+                                    <li><a href="#">"双十一"即开票包裹提...<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">网点客户互动平台<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">即开二代系统上线通知<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">"双十一"即开票包裹提...<span class="lighttip">2017-10-11</span></a></li>
+                                    <li><a href="#">网点客户互动平台<span class="lighttip">2017-10-11</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 2元区 -->
+            <div class="con" id="probox1">
+                <div class="header s6">
+                    <h6>2元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l1height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/098.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/231.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/234.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/254.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/354.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/435.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/452.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/455.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/543.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/546.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/564.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/657.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/687.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 3元区 -->
+            <div class="con" id="probox2">
+                <div class="header s7">
+                    <h6>3元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l1height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/734.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/768.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/786.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/867.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/0897.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/897.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/908.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/989.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/2343.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/2345.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/3245.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/3448.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/3450.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/3456.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4356.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 5元区 -->
+            <div class="con" id="probox3">
+                <div class="header s8">
+                    <h6>5元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l2height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4532.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5432.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5534.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5643.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6754.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6756.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8675.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8757.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8978.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/9087.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09898.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32454.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/35465.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54653.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54657.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/57687.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/65768.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/546576.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 10元区 -->
+            <div class="con" id="probox4">
+                <div class="header s9">
+                    <h6>10元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l2height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4532.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5432.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5534.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5643.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6754.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6756.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8675.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8757.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8978.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/9087.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09898.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32454.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/35465.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54653.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54657.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/57687.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/65768.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/546576.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 20元区 -->
+            <div class="con" id="probox5">
+                <div class="header s10">
+                    <h6>20元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l2height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4532.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5432.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5534.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/5643.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6754.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/6756.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8675.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8757.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/8978.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/9087.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09898.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32454.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34567.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/35465.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54653.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54657.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/57687.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/65768.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/546576.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 30元区 -->
+            <div class="con" id="probox6">
+                <div class="header s11">
+                    <h6>30元区</h6><a href="javascript:;" class="pull-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                </div>
+                <div class="body">
+                    <ul class="prolist clearfix l1height">
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/32.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/34.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/098.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/231.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/234.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/254.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/354.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/435.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/452.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/455.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/543.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/546.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/564.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/657.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <div class="img"><img src="img/tmp/687.png" width='0' height='0' onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="container">
+            <div class="clearfix mb20">
+                <ul class="footlink pull-left">
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">新手上路</a></li>
+                    <li><a href="#">网站手册</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">培训资料</a></li>
+                    <li><a href="#">彩票知识</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#"><i class="fa fa-comments-o mr5"></i>网点讨论</a></li>
+                    <li><a href="#"><i class="fa fa-commenting-o mr5"></i>网点留言</a></li>
+                    <li><a href="#"><i class="fa fa-edit mr5"></i>在线调研</a></li>
+                </ul>
+            </div>
+            <div class="friendcon con">
+                <a href="javascript:;" class="pa-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                <span class="pa-left">友情链接：</span>
+                <div class="body">
+                    <ul class="clearfix linklist prolist">
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomtext">
+                版权所有©山东浪潮新世纪科技有限公司
+            </div>
+        </div>
+    </div>
+    <!-- js引用部分↓ -->
+    <!-- jQuery通用库 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap-js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.pin.js"></script>
+    <!-- ui新建js-js -->
+    <script src="js/plugins.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#roll").parallelRoll({
+            amount: 1,
+            direction: 'left',
+            prev: 'next',
+            //向上
+            next: 'prev',
+            //向下
+            time: 10000,
+        });
+        $(".pinned").pin({
+            containerSelector: ".container"
+        });
+    });
+    </script>
+    <!-- js引用部分↑ -->
+</body>
+
+</html>
