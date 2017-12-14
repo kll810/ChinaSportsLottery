@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>中国体育彩票-彩票分析</title>
+    <title>中国体育彩票-销量分析</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -96,18 +96,18 @@
     <div class="container pr listcon">
         <!-- 页面标题+面包屑导航 -->
         <h1 class="pagetitle">
-            彩票分析
+            销量分析
             <div class="pull-right f14">
-                当前位置：订票中心><span class="font-org">彩票分析</span>
+                当前位置：我的业绩><span class="font-org">销量分析</span>
             </div>
         </h1>
         <div class="pl30 pt20 pb20 pr30">
-            <b>彩票名称：时来运转</b>
+            <b>个人站点分析</b>
             <div class="pt20">
                 <ul class="nav analytab">
-                    <li class="active"><a href="#home" data-toggle="tab">全省销量分析</a></li>
-                    <li><a href="#profile" data-toggle="tab">各地市销量分析</a></li>
-                    <li><a href="#messages" data-toggle="tab">各地市综合分析</a></li>
+                    <li class="active"><a href="#home" data-toggle="tab">日常销量</a></li>
+                    <li><a href="#profile" data-toggle="tab">面值销量</a></li>
+                    <li><a href="#messages" data-toggle="tab">票种销量</a></li>
                 </ul>
                 <div class="tab-content">
                     <div class="tab-pane active" id="home">
@@ -134,40 +134,6 @@
                     <div class="tab-pane" id="profile">
                         <div class="text-center p20">
                             <form class="form-inline mb0">
-                                <label for="" class="control-label mr10 ml10 mb0">选择时间：</label>
-                                <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
-                                    <input type="text" class="span2" placeholder="2017-12-13" readonly>
-                                    <span class="add-on"><i class="fa fa-calendar"></i></span>
-                                </span>
-                                <input type="hidden" id="dtp_input2" value="" />
-                            </form>
-                        </div>
-                        <div class="pr">
-                            <div class="" style="height:680px;" id="chart3">
-                                sdfas
-                            </div>
-                            <div class="citytop5">
-                                <h3 class="title">各地市销量比排名TOP5</h3>
-                                <ul class="list">
-                                    <li><i class="pm1">1</i>日照市<span class="pa-right">20%</span></li>
-                                    <li><i class="pm2">2</i>日照市<span class="pa-right">15%</span></li>
-                                    <li><i class="pm3">3</i>日照市<span class="pa-right">10%</span></li>
-                                    <li><i>4</i>日照市<span class="pa-right">9%</span></li>
-                                    <li><i>5</i>日照市<span class="pa-right">8%</span></li>
-                                </ul>
-                            </div>
-                            <div class="charttip">
-                                <i class="chart-img-tip"></i><span class="vm ml10">当前销量百分比</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="tab-pane" id="messages">
-                        <div class="text-center p20">
-                            <form class="form-inline mb0">
-                                <label for="" class="control-label mr10 ml10 mb0">选择地市：</label>
-                                <select name="" id="" class="span2">
-                                    <option value="">请选择</option>
-                                </select>
                                 <label for="" class="control-label mr10 ml10 mb0">时间段：</label>
                                 <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
                                     <input type="text" class="span2" placeholder="2017-12-13" readonly>
@@ -181,12 +147,85 @@
                                 </span>
                                 <input type="hidden" id="dtp_input1" value="" />
                             </form>
-                            <div class="text-center">
-                                <a href="#" class="btn btn-warning w80">查看</a>
+                        </div>
+                        <div class="pr">
+                            <div class="chart-bar" id="chart3">
+                                sdfas
                             </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="messages">
+                        <div class="text-center p20">
+                            <form class="form-inline mb0">
+                                <label for="" class="control-label mr10 ml10 mb0">选择时间：</label>
+                                <select name="" id="">
+                                    <option value="">2017年12月</option>
+                                </select>
+                            </form>
                         </div>
                         <div class="chart-bar" id="chart2">
                             sdfas
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="pl30 pt20 pb20 pr30 bordertop bw2">
+            <b>全省分析</b>
+            <div class="p20">
+                <ul class="nav analytab">
+                    <li class="active"><a href="#box4" data-toggle="tab">全省面值业绩</a></li>
+                    <li><a href="#box5" data-toggle="tab">全省票种业绩</a></li>
+                </ul>
+                <div class="tab-content">
+                    <div class="tab-pane active" id="box4">
+                        <div class="text-center p20">
+                            <form class="form-inline mb0">
+                                <label for="" class="control-label mr10 ml10 mb0">选择时间：</label>
+                                <select name="" class="span2" id="">
+                                    <option value="">2017年12月</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="citytop5 yjlist">
+                            <h3 class="title clearfix">
+                                <span class="td1">排名</span><span class="td2">面值</span><span class="td3">销量百分比</span>
+                            </h3>
+                            <ul class="list">
+                                <li><span class="td1"><i class="pm1">1</i></span><span class="td2">10元</span><span class="td3"><div class="progress progress-min progress-red"><div class="bar" style="width: 24.4%"></div></div><span class="vm ml10">24.4%</span></span></li>
+                                <li><span class="td1"><i class="pm2">2</i></span><span class="td2">5元</span><span class="td3"><div class="progress progress-min progress-yellow"><div class="bar" style="width: 20%"></div></div><span class="vm ml10">20.0%</span></span></span></li>
+                                <li><span class="td1"><i class="pm3">3</i></span><span class="td2">20元</span><span class="td3"><div class="progress progress-min progress-green"><div class="bar" style="width: 18%"></div></div><span class="vm ml10">18.0%</span></span></span></li>
+                                <li><span class="td1"><i>4</i></span><span class="td2">3元</span><span class="td3"><div class="progress progress-min progress-blue"><div class="bar" style="width: 10%"></div></div><span class="vm ml10">10.0%</span></span></span></li>
+                                <li><span class="td1"><i>5</i></span><span class="td2">30元</span><span class="td3"><div class="progress progress-min progress-blue"><div class="bar" style="width: 10%"></div></div><span class="vm ml10">10.0%</span></span></span></span></li>
+                                <li><span class="td1"><i>6</i></span><span class="td2">2元</span><span class="td3"><div class="progress progress-min progress-blue"><div class="bar" style="width: 10%"></div></div><span class="vm ml10">10.0%</span></span></span></span></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="box5">
+                        <div class="text-center p20">
+                            <form class="form-inline mb0">
+                                <label for="" class="control-label mr10 ml10 mb0">选择时间：</label>
+                                <select name="" id="" class="span2">
+                                    <option value="">2017年12月</option>
+                                </select>
+                            </form>
+                        </div>
+                        <div class="citytop5 yjlist">
+                            <h3 class="title clearfix">
+                                <span class="td1">排名</span><span class="td2">票种编号</span><span class="td3">票种</span>
+                            </h3>
+                            <ul class="list">
+                                <li><span class="td1"><i class="pm1">1</i></span><span class="td2">0387</span><span class="td3">卧虎藏龙</span></li>
+                                <li><span class="td1"><i class="pm2">2</i></span><span class="td2">0332</span><span class="td3">20倍现金</li>
+                                <li><span class="td1"><i class="pm3">3</i></span><span class="td2">0487</span><span class="td3">十倍幸运</li>
+                                <li><span class="td1"><i>4</i></span><span class="td2">0342</span><span class="td3">甜蜜蜜</span></li>
+                                <li><span class="td1"><i>5</i></span><span class="td2">0765</span><span class="td3">天下明钻</span></li>
+                                <li><span class="td1"><i>6</i></span><span class="td2">0987</span><span class="td3">7乐无穷</span></li>
+                                <li><span class="td1"><i>7</i></span><span class="td2">0342</span><span class="td3">甜蜜蜜</span></li>
+                                <li><span class="td1"><i>8</i></span><span class="td2">0765</span><span class="td3">天下明钻</span></li>
+                                <li><span class="td1"><i>9</i></span><span class="td2">0987</span><span class="td3">7乐无穷</span></li>
+                                <li><span class="td1"><i>10</i></span><span class="td2">0987</span><span class="td3">7乐无穷</span></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -366,116 +405,6 @@
         grid: {
             left: '3%',
             right: '50',
-            bottom: '40',
-            top: '12%',
-            containLabel: true
-        },
-        textStyle: {
-            color: '#000',
-            fontSize: 12
-        },
-        xAxis: [{
-            name: '单位：(月)',
-            nameTextStyle: {
-                color: "#9a9a9a"
-            },
-            type: 'category',
-            data: ['2016-09', '2016-10', '2016-11', '2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06', '2017-07', '2017-08', '2017-09', '2017-10', '2017-11', '2017-12', '2018-01', '2018-02', '2018-03', '2018-04', '2018-05', '2018-06', '2018-07', '2018-08'],
-            axisTick: {
-                alignWithLabel: true
-            },
-            /*坐标颜色*/
-            axisLine: {
-                lineStyle: {
-                    color: '#d5d5d5',
-                    width: 2
-                }
-            }
-        }],
-        yAxis: [{
-            name: '单位：(百分比)',
-            nameTextStyle: {
-                color: "#9a9a9a"
-            },
-            type: 'value',
-            /*坐标颜色*/
-            axisLine: {
-                lineStyle: {
-                    color: '#fff',
-                    width: 2
-                }
-            },
-            /*网络线*/
-            splitLine: {
-                show: true,
-                lineStyle: {
-                    color: '#f1f1f1',
-                    width: 1
-                }
-            },
-            axisLabel: {
-                formatter: '{value} %',
-            }
-        }],
-        dataZoom:[
-        {   show:true,
-            height:30,
-            xAxisIndex: [0],
-            bottom:0,
-            type: 'slider',
-            start: 1,
-            end: 80,
-            handleSize:'100%',
-            handleStyle: {
-                color:'#fe680f'
-            }
-         }
-        ],
-        series: [{
-            name: '当前销量百分比',
-            type: 'bar',
-            color: ['#04a5f9'],
-            itemStyle: {
-                normal: {
-                    /*label: {
-                        show: true,
-                        position: 'top'
-                    },*/
-                    /*柱状渐变*/
-                    color: new echarts.graphic.LinearGradient(
-                        0, 0, 0, 1, [{
-                            offset: 0,
-                            color: '#69cfff'
-                        }, {
-                            offset: 1,
-                            color: '#35a3fc'
-                        }]
-                    )
-                }
-            },
-            barWidth: '60%',
-            data: [65, 95, 100, 70, 90, 95, 80, 65, 95, 100, 70, 90, 95, 80, 65, 95, 100, 70, 90, 95, 80, 65, 95, 100, ]
-        }]
-    };
-    option2 = {
-
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            },
-            backgroundColor: 'rgba(0, 76, 152, .6)',
-            borderColor: '#035699',
-            borderWidth: 1,
-        },
-        legend: {
-            data: ['当前销量百分比', '同比', '环比'],
-            left: 'right',
-            top: '0',
-        },
-        grid: {
-            left: '3%',
-            right: '50',
             bottom: '5%',
             top: '12%',
             containLabel: true
@@ -551,251 +480,356 @@
             },
             barWidth: '60%',
             data: [65, 95, 100, 70, 90, 95, 80, 65, 95, 100, 70, 90, 95, 80, 65, 95, 100, 70, 90, 95, 80, 65, 95, 100, ]
-        }, {
-            name: '同比',
-            type: 'line',
-            smooth: true,
-            lineStyle: {
-                normal: {
-                    width: 2
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#ffb827'
-                }
-            },
-            data: [96.3, 96.4, 97.5, 95.6, 98.1, 94.8, 89.6, 94.1, 80.1, 52.4, 75.8, 94.7, 96.3, 96.4, 97.5, 95.6, 98.1, 94.8, 89.6, 94.1, 80.1, 52.4, 75.8, 96.4]
-        }, {
-            name: '环比',
-            type: 'line',
-            smooth: true,
-            lineStyle: {
-                normal: {
-                    width: 2
-                }
-            },
-            itemStyle: {
-                normal: {
-                    color: '#97d325'
-                }
-            },
-            data: [97.3, 99.2, 99.3, 100.0, 99.6, 90.6, 80.0, 91.5, 69.8, 67.5, 90.4, 84.9, 97.3, 99.2, 99.3, 100.0, 99.6, 90.6, 80.0, 91.5, 69.8, 67.5, 90.4, 96.4]
         }]
     };
-
-    var geoCoordMap = {
-        '济南市': [117.00, 36.67],
-        '青岛市': [120.35, 36.08],
-        '淄博市': [118.04, 36.81],
-        '枣庄市': [117.55, 34.85],
-        '东营市': [118.66, 37.43],
-        '烟台市': [121.39, 37.53],
-        '潍坊市': [119.10, 36.70],
-        '济宁市': [116.58, 35.41],
-        '泰安市': [117.12, 36.19],
-        '威海市': [122.11, 37.50],
-        '日照市': [119.46, 35.42],
-        '莱芜市': [117.67, 36.21],
-        '临沂市': [118.32, 35.06],
-        '德州市': [116.30, 37.45],
-        '聊城市': [115.98, 36.45],
-        '滨州市': [118.01, 37.38],
-        '菏泽市': [115.46, 35.24]
-    };
-    var rawData = [{
-        name: '济南市',
-        value: 14
-    }, {
-        name: '青岛市',
-        value: 42
-    }, {
-        name: '淄博市',
-        value: 21
-    }, {
-        name: '枣庄市',
-        value: 39
-    }, {
-        name: '东营市',
-        value: 16
-    }, {
-        name: '烟台市',
-        value: 54
-    }, {
-        name: '潍坊市',
-        value: 35
-    }, {
-        name: '济宁市',
-        value: 27
-    }, {
-        name: '泰安市',
-        value: 38
-    }, {
-        name: '威海市',
-        value: 21
-    }, {
-        name: '日照市',
-        value: 42
-    }, {
-        name: '莱芜市',
-        value: 28
-    }, {
-        name: '临沂市',
-        value: 16
-    }, {
-        name: '德州市',
-        value: 23
-    }, {
-        name: '聊城市',
-        value: 28
-    }, {
-        name: '滨州市',
-        value: 16
-    }, {
-        name: '菏泽市',
-        value: 23
-    }];
-    option3 = {
-        geo: {
-            map: "山东",
-            layoutCenter: ["50%", "50%"],
-            layoutSize: "150%",
-
-            mapLocation: {
-                width: "100%",
-                height: "100%"
+    option2 = {
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
             },
+            backgroundColor: 'rgba(0, 76, 152, .6)',
+            borderColor: '#035699',
+            borderWidth: 1,
+        },
+        legend: {
+            data: ['当前销售量'],
+            left: 'right',
+            top: '0',
+        },
+        grid: {
+            left: '3%',
+            right: '50',
+            bottom: '5%',
+            top: '12%',
+            containLabel: true
+        },
+        textStyle: {
+            color: '#000',
+            fontSize: 12
+        },
+        xAxis: [{
+            nameTextStyle: {
+                color: "#9a9a9a"
+            },
+            type: 'category',
+            data: ['卧虎藏龙', '20倍现金', '十倍幸运', '甜蜜蜜', '天下明钻', '7乐无穷', '强力5', '富贵有余', '巧克力', '超值8', '麻辣6', '翡翠绿'],
+            axisTick: {
+                alignWithLabel: true
+            },
+            /*坐标颜色*/
+            axisLine: {
+                lineStyle: {
+                    color: '#d5d5d5',
+                    width: 2
+                }
+            }
+        }],
+        yAxis: [{
+            name: '单位：(万元)',
+            nameTextStyle: {
+                color: "#9a9a9a"
+            },
+            type: 'value',
+            /*坐标颜色*/
+            axisLine: {
+                lineStyle: {
+                    color: '#fff',
+                    width: 2
+                }
+            },
+            /*网络线*/
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#f1f1f1',
+                    width: 1
+                }
+            },
+            axisLabel: {
+                formatter: '{value} %',
+            }
+        }],
+        series: [{
+            name: '当前销售量',
+            type: 'bar',
+            color: ['#04a5f9'],
             itemStyle: {
                 normal: {
-                    areaColor: "#bdeaff",
-                    borderColor: "#1063ac"
-                },
-                emphasis: {
-                    areaColor: '#8ac2dc'
+                    /*label: {
+                        show: true,
+                        position: 'top'
+                    },*/
+                    /*柱状渐变*/
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#69cfff'
+                        }, {
+                            offset: 1,
+                            color: '#35a3fc'
+                        }]
+                    )
                 }
             },
-            label: {
-                normal: {
-                    formatter: "{b}",
-                    position: "right",
-                    show: false
-                },
-                emphasis: {
-                    show: false
+            barWidth: '60%',
+            data: [65, 95, 100, 70, 90, 95, 80, 65, 95, 100, 70, 90]
+        }]
+    };
+    option3 = {
+        tooltip: { //提示框组件
+            trigger: 'axis',
+            formatter: '{b}<br />{a0}: {c0}<br />{a1}: {c1}',
+            axisPointer: {
+                type: 'shadow',
+                label: {
+                    backgroundColor: '#6a7985'
                 }
             },
+            textStyle: {
+                color: '#fff',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            }
         },
-        series: []
+        grid: {
+            left: '1%',
+            right: '4%',
+            bottom: '40',
+            top: 30,
+            padding: '0 0 10 0',
+            containLabel: true,
+        },
+        legend: { //图例组件，颜色和名字
+            right: 10,
+            top: 0,
+            itemGap: 16,
+            itemWidth: 18,
+            itemHeight: 10,
+            data: [{
+                name: '2元面值',
+            }, {
+                name: '3元面值',
+            },{
+                name: '5元面值',
+            }, {
+                name: '10元面值',
+            }, {
+                name: '20元面值',
+            }, {
+                name: '30元面值',
+            }],
+            textStyle: {
+                color: '#a8aab0',
+                fontStyle: 'normal',
+                fontFamily: '微软雅黑',
+                fontSize: 12,
+            }
+        },
+        xAxis: [{
+            type: 'category',
+            boundaryGap: true, //坐标轴两边留白
+            data: ['2016-12', '2017-01', '2017-02', '2017-03', '2017-04', '2017-05', '2017-06', '2017-07', '2017-08', '2017-09'],
+            axisLabel: { //坐标轴刻度标签的相关设置。
+                interval: 0, //设置为 1，表示『隔一个标签显示一个标签』
+                margin: 15,
+                textStyle: {
+                    color: '#333',
+                    fontStyle: 'normal',
+                    fontFamily: '微软雅黑',
+                    fontSize: 12,
+                }
+            },
+            axisTick: { //坐标轴刻度相关设置。
+                show: false,
+            },
+            axisLine: {
+                lineStyle: {
+                    color: '#d5d5d5',
+                    width: 2
+                }
+            },
+            splitLine: { //坐标轴在 grid 区域中的分隔线。
+                show: false,
+            }
+        }],
+        yAxis: [{
+            type: 'value',
+            name:'单位(万元)',
+            nameTextStyle: {
+                color: "#9a9a9a"
+            },
+            splitNumber: 5,
+            axisLabel: {
+                textStyle: {
+                    color: '#353535',
+                    fontStyle: 'normal',
+                    fontFamily: '微软雅黑',
+                    fontSize: 12,
+                }
+            },
+            axisTick: {
+                show: false
+            },
+            /*坐标颜色*/
+            axisLine: {
+                lineStyle: {
+                    color: '#fff',
+                    width: 2
+                }
+            },
+            /*网络线*/
+            splitLine: {
+                show: true,
+                lineStyle: {
+                    color: '#f1f1f1',
+                    width: 1
+                }
+            },
+        }],
+        dataZoom:[
+        {   show:true,
+            height:30,
+            xAxisIndex: [0],
+            bottom:0,
+            type: 'slider',
+            start: 1,
+            end: 80,
+            handleSize:'100%',
+            handleStyle: {
+                color:'#fe680f'
+            }
+         }
+        ],
+        series: [{
+            name: '2元面值',
+            type: 'bar',
+            data: [4.9, 4.3, 6.2, 2.6, 4.7, 4.6, 4.2, 2.6, 8, 9.4],
+            barWidth: 14,
+            barGap: 0, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#34a2fc'
+                        }, {
+                            offset: 1,
+                            color: '#69cfff'
+                        }]
+                    )
+                },
+            },
+        }, {
+            name: '3元面值',
+            type: 'bar',
+            data: [5, 5, 4.4, 2.7, 5.7, 4.6, 1.2, 2.7, 4.8, 6.0],
+            barWidth: 14,
+            barGap: 0.2, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#1269d5'
+                        }, {
+                            offset: 1,
+                            color: '#50aefe'
+                        }]
+                    )
+                },
+            },
+        },{
+            name: '5元面值',
+            type: 'bar',
+            data: [2, 5, 4.4, 2.7, 5.7, 4.6, 1.2, 2.7, 4.8, 6.0],
+            barWidth: 14,
+            barGap: 0.2, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#1e75ff'
+                        }, {
+                            offset: 1,
+                            color: '#ad82ff'
+                        }]
+                    )
+                },
+            },
+        },{
+            name: '10元面值',
+            type: 'bar',
+            data: [5, 5, 4.4, 2.7, 5.7, 4.6, 1.2, 2.7, 4.8, 6.0],
+            barWidth: 14,
+            barGap: 0.2, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#43a51a'
+                        }, {
+                            offset: 1,
+                            color: '#b3eb50'
+                        }]
+                    )
+                },
+            },
+        },{
+            name: '20元面值',
+            type: 'bar',
+            data: [8, 5, 4.4, 2.7, 5.7, 4.6, 1.2, 2.7, 4.8, 6.0],
+            barWidth: 14,
+            barGap: 0.2, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#f6a705'
+                        }, {
+                            offset: 1,
+                            color: '#fed326'
+                        }]
+                    )
+                },
+            },
+        },{
+            name: '30元面值',
+            type: 'bar',
+            data: [6, 5, 4.4, 2.7, 5.7, 4.6, 1.2, 2.7, 4.8, 6.0],
+            barWidth: 14,
+            barGap: 0.2, //柱间距离
+            itemStyle: { //图形样式
+                normal: {
+                    
+                    color: new echarts.graphic.LinearGradient(
+                        0, 0, 0, 1, [{
+                            offset: 0,
+                            color: '#fb5103'
+                        }, {
+                            offset: 1,
+                            color: '#ff9d4f'
+                        }]
+                    )
+                },
+            },
+        }]
     };
     Chart1.setOption(option1);
     Chart2.setOption(option2);
     Chart3.setOption(option3);
-
-    function renderEachCity() {
-        var option8a = {
-            xAxis: [],
-            yAxis: [],
-            grid: [],
-            series: []
-        };
-        echarts.util.each(rawData, function(dataItem, idx) {
-            var geoCoord = geoCoordMap[dataItem.name];
-            var coord = Chart3.convertToPixel('geo', geoCoord);
-            idx += '';
-            xAxisCategory = [];
-            xAxisCategory.push(dataItem.name);
-            inflationData = [];
-            inflationData.push(dataItem.value);
-
-            option8a.grid.push({
-                id: idx,
-                width: 30,
-                height: 86,
-                left: coord[0] - 15,
-                top: coord[1] - 100,
-                z: 100
-            });
-            option8a.xAxis.push({
-                id: idx,
-                gridId: idx,
-                type: 'category',
-                splitLine: {
-                    show: false
-                },
-                axisTick: {
-                    show: false
-                },
-                axisLabel: {
-                    show: true
-                },
-                axisLine: {
-                    show: false
-                },
-                data: xAxisCategory,
-                z: 100
-            });
-            option8a.yAxis.push({
-                id: idx,
-                gridId: idx,
-                min: 0,
-                max: 100,
-                splitLine: {
-                    show: false
-                },
-                axisTick: {
-                    show: false
-                },
-                axisLabel: {
-                    show: false
-                },
-                axisLine: {
-                    show: false
-                },
-                z: 100
-            });
-            option8a.series.push({
-                id: idx,
-                name: dataItem.name,
-                xAxisId: idx,
-                yAxisId: idx,
-                type: 'bar',
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(
-                            0, 0, 0, 1, [{
-                                offset: 0,
-                                color: '#fed327'
-                            }, {
-                                offset: 1,
-                                color: '#f6a806'
-                            }]
-                        ),
-                        opacity: 1
-                    }
-                },
-                label: {
-                    normal: {
-                        show: true,
-                        position: 'bottom',
-                        align: 'center',
-                        offset: [0, 20],
-                        fontWeight: 'bolder',
-                        fontSize: '16',
-                        formatter: '{c}%',
-                    }
-                },
-                data: inflationData,
-                z: 100
-            });
-        });
-        Chart3.setOption(option8a);
-
-    }
-    setTimeout(renderEachCity, 20);
     $('a[data-toggle="tab"]').on('shown', function(e) {
         Chart2.resize();
         Chart3.resize();
-        setTimeout(renderEachCity, 20);
     });
     </script>
     <!-- js引用部分↑ -->
