@@ -1456,6 +1456,19 @@ body {
 .footlink li a:hover {
     color: #fb5104
 }
+.i-f-dis,.i-f-ser,.i-f-sur{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    background: url(../img/menuicon-min.png) -86px 0;
+    margin-right: 10px;
+}
+.i-f-ser{
+    background-position: -115px 0;
+}
+.i-f-sur{
+    background-position: -115px -48px;
+}
 .friendcon,
 .friendcon .body {
     background: none;
