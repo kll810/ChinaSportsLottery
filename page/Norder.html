@@ -4,10 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>中国体育彩票-大奖赏析</title>
+    <title>中国体育彩票-当前订单</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 日历插件样式 -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
     <!-- 页面基础样式 -->
     <link href="css/uiStyle.css" rel="stylesheet">
     <script>
@@ -61,8 +63,20 @@
             <!-- menu -->
             <div class="clearfix">
                 <ul class="menulist pull-right">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">订票中心</a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">订票中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="xglist.html"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="cflist.html"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="collect.html"><i class="i9"></i>我的收藏</a></li>
+                            <li><a href="shopping.html"><i class="i8"></i>购物车</a></li>
+                            <li><a href="order.html"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="Norder.html"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="Logistics.html"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="proshow.html"><i class="i6"></i>商品展示</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">活动中心</a></li>
                     <li><a href="#">交流中心</a></li>
                     <li><a href="#">我的业绩</a></li>
@@ -73,38 +87,52 @@
         </div>
     </div>
     <!-- 内容 -->
-    <div class="container pr listcon">
+    <div class="container pr listcon scrollcontainer">
         <!-- 页面标题+面包屑导航 -->
         <h1 class="pagetitle">
-            大奖赏析
+            订单查询
             <div class="pull-right f14">
-                当前位置：首页><span class="font-org">大奖赏析</span>
+                当前位置：订票中心><span class="font-org">订单查询</span>
             </div>
         </h1>
-        <ul class="newslist">
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-        </ul>
-        <div class="text-center">
-            <ul class="pager">
-                <li><i class=" mr10">共118条纪录，当前第1条到第10条</i></li>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">上一页</a></li>
-                <li><a href="#">下一页</a></li>
-                <li><a href="#">末页</a></li>
-                <li><i class="vm ml20">每页</i><select name="" id="" class="vm mb0 ml10" style="width:50px;"><option value="">1</option></select></li>
-                <li><i class="vm ml20">转到</i><select name="" id="" class="vm mb0 ml10" style="width:50px;"><option value="">1</option></select><i class="vm ml10">页</i></li>
-            </ul>
+        <!-- 搜索 -->
+        <div class="p20">
+            <form class="form-inline">
+                <label for="" class="control-label mr10 ml10 mb0">彩票编号</label>
+                <input type="text" class="" placeholder="请输入彩票编号">
+                <label for="" class="control-label mr10 ml10 mb0">彩票名称</label>
+                <input type="text" class="" placeholder="请输入彩票名称">
+                <label for="" class="control-label mr10 ml10 mb0">订单编号</label>
+                <input type="text" class="" placeholder="请输入订单编号">
+            </form>
+            <form class="form-inline">
+                <label for="" class="control-label mr10 ml10 mb0">订单时间</label>
+                <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input type="text" class="" placeholder="2017-12-13" readonly>
+                    <span class="add-on"><i class="fa fa-calendar"></i></span>
+                </span>
+                <input type="hidden" id="dtp_input2" value="" />
+                <label for="" class="control-label mr10 ml10 mb0">至</label>
+                <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                    <input type="text" class="" placeholder="2017-12-13" readonly>
+                    <span class="add-on"><i class="fa fa-calendar"></i></span>
+                </span>
+                <input type="hidden" id="dtp_input1" value="" />
+            </form>
+            <div class="text-center">
+                <button class="btn btn-warning w100" type="button">查询</button>
+            </div>
         </div>
-        <!-- 轮播 -->
+        <div class="p20 bordertop bw2">
+            <div class="text-center clearfix pb30 pt30">
+                <img src="img/null3.png" alt="">
+                <p class="f16 mt15">您暂时未提交订单，请及时录入订单，以免耽误您本次订票！</p>
+                <p class="mt20">
+                    <a href="xglist.html" class="btn btn-large btn-success w100">继续购物</a>
+                </p>
+            </div>
+        </div>
+        <!-- 热点推荐轮播 -->
         <div class="mt10 listw190 text-center bordertop bw2">
             <h3 class="list-boxtitle"><b>热点推荐</b></h3>
             <div class="box">
@@ -316,6 +344,9 @@
     <script src="js/jquery.min.js"></script>
     <!-- bootstrap-js -->
     <script src="js/bootstrap.min.js"></script>
+    <!-- 日历 -->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
     <!-- ui新建js-js -->
     <script src="js/plugins.js"></script>
     <script>
@@ -328,6 +359,17 @@
             next: 'prev',
             //向下
             time: 10000,
+        });
+        $('.form_date').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            format: "yyyy-mm-dd",
         });
     });
     </script>

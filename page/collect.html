@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>中国体育彩票-大奖赏析</title>
+    <title>中国体育彩票-我的收藏</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -61,8 +61,20 @@
             <!-- menu -->
             <div class="clearfix">
                 <ul class="menulist pull-right">
-                    <li><a href="#">首页</a></li>
-                    <li><a href="#">订票中心</a></li>
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">订票中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="xglist.html"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="cflist.html"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="collect.html"><i class="i9"></i>我的收藏</a></li>
+                            <li><a href="shopping.html"><i class="i8"></i>购物车</a></li>
+                            <li><a href="order.html"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="Norder.html"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="Logistics.html"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="proshow.html"><i class="i6"></i>商品展示</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">活动中心</a></li>
                     <li><a href="#">交流中心</a></li>
                     <li><a href="#">我的业绩</a></li>
@@ -76,36 +88,86 @@
     <div class="container pr listcon">
         <!-- 页面标题+面包屑导航 -->
         <h1 class="pagetitle">
-            大奖赏析
+            我的收藏
             <div class="pull-right f14">
-                当前位置：首页><span class="font-org">大奖赏析</span>
+                当前位置：订票中心><span class="font-org">我的收藏</span>
             </div>
         </h1>
-        <ul class="newslist">
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-            <li><a href="djinfo.html">彩民喜中顶呱呱“金豆豆”5万元 奖金给女友买礼物</a><i class="datetime">2017-10-09</i></li>
-        </ul>
-        <div class="text-center">
-            <ul class="pager">
-                <li><i class=" mr10">共118条纪录，当前第1条到第10条</i></li>
-                <li><a href="#">首页</a></li>
-                <li><a href="#">上一页</a></li>
-                <li><a href="#">下一页</a></li>
-                <li><a href="#">末页</a></li>
-                <li><i class="vm ml20">每页</i><select name="" id="" class="vm mb0 ml10" style="width:50px;"><option value="">1</option></select></li>
-                <li><i class="vm ml20">转到</i><select name="" id="" class="vm mb0 ml10" style="width:50px;"><option value="">1</option></select><i class="vm ml10">页</i></li>
-            </ul>
-        </div>
-        <!-- 轮播 -->
-        <div class="mt10 listw190 text-center bordertop bw2">
+        <table class="table prolisttable">
+            <thead>
+                <tr>
+                    <th width="110">
+                        彩票编号
+                    </th>
+                    <th class="text-left">游戏</th>
+                    <th>面值(元)</th>
+                    <th>每包金额(元)</th>
+                    <th width="115">收藏时间</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        0345
+                    </td>
+                    <td class="text-left">
+                        <a href="proinfo.html">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                            <span class="protitle">天下名钻</span>
+                        </a>
+                    </td>
+                    <td>5</td>
+                    <td>
+                        600
+                    </td>
+                    <td>2017-11-10</td>
+                    <td><a href="#" class="btn btn-warning mr10">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        0345
+                    </td>
+                    <td class="text-left">
+                        <a href="proinfo.html">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                            <span class="protitle">天下名钻</span>
+                        </a>
+                    </td>
+                    <td>5</td>
+                    <td>
+                        600
+                    </td>
+                    <td>2017-11-10</td>
+                    <td><a href="#" class="btn btn-warning mr10">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+                <tr>
+                    <td>
+                        0345
+                    </td>
+                    <td class="text-left">
+                        <a href="proinfo.html">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                            <span class="protitle">天下名钻</span>
+                        </a>
+                    </td>
+                    <td>5</td>
+                    <td>
+                        600
+                    </td>
+                    <td>2017-11-10</td>
+                    <td><a href="#" class="btn btn-warning mr10">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <!-- 热点推荐 -->
+        <div class="mt10 listw190 text-center ">
             <h3 class="list-boxtitle"><b>热点推荐</b></h3>
             <div class="box">
                 <span class="prev"><i class="fa fa-chevron-left"></i></span>
@@ -311,6 +373,20 @@
             </div>
         </div>
     </div>
+    <!-- Modal-删除提示 -->
+    <div id="myModal" class="modal hide fade modal-smll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <h4 class="text-center mt0">提示<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></h4>
+            
+            <p class="text-center p25">
+                <span class="vm f16">确定要删除该产品么？</span>
+            </p>
+            <div class="text-center p20">
+                <a class="btn btn-yellow btn-large w100 js-close-modal mr20" href="collect-null.html">确定</a>
+                <a class="btn btn-warning btn-large w100 js-close-modal" href="#">取消</a>
+            </div>
+        </div>
+    </div>
     <!-- js引用部分↓ -->
     <!-- jQuery通用库 -->
     <script src="js/jquery.min.js"></script>
@@ -318,6 +394,7 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- ui新建js-js -->
     <script src="js/plugins.js"></script>
+    
     <script>
     $(document).ready(function() {
         $("#roll").parallelRoll({

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国体育彩票-购物车</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 页面基础样式 -->
+    <link href="css/uiStyle.css" rel="stylesheet">
+    <script>
+    /******最完美解决 图片在图片框内按宽高比例自动缩放！！！***/
+    //Img:要放图片的img元素，onload时传参可用this
+    //maxHeight  :img元素的高度，像素（图片框 最大高度）
+    //maxWidth:img元素的宽度，像素（图片框 最大宽度）
+    function AutoSize(Img, maxWidth, maxHeight) {
+        var image = new Image();
+        //原图片原始地址（用于获取原图片的真实宽高，当<img>标签指定了宽、高时不受影响）
+        image.src = Img.src;
+        // 当图片比图片框小时不做任何改变 
+        if (image.width < maxWidth && image.height < maxHeight) {
+            Img.width = image.width;
+            Img.height = image.height;
+        } else //原图片宽高比例 大于 图片框宽高比例,则以框的宽为标准缩放，反之以框的高为标准缩放
+        {
+            if (maxWidth / maxHeight <= image.width / image.height) //原图片宽高比例 大于 图片框宽高比例
+            {
+                Img.width = maxWidth; //以框的宽度为标准
+                Img.height = maxWidth * (image.height / image.width);
+            } else { //原图片宽高比例 小于 图片框宽高比例
+                Img.width = maxHeight * (image.width / image.height);
+                Img.height = maxHeight; //以框的高度为标准
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- min导航 -->
+    <div class="min-nav">
+        <div class="container">
+            <span class="mr10">欢迎您：山东测试账号</span>
+            <a href="#" class="ml10 mr10">修改密码</a>
+            <a href="#" class="ml10 mr10"><i class="fa fa-power-off mr5"></i>退出系统</a>
+            <a href="#" class="ml10 pull-right">加入收藏</a>
+            <span class="pull-right">|</span>
+            <a href="#" class="ml10 mr10 pull-right">设为首页</a>
+        </div>
+    </div>
+    <!-- 长banner -->
+    <div class="banner1">
+        <div class="container"><img src="img/banner2.png" width="100%"></div>
+    </div>
+    <!-- 导航 -->
+    <div class="nav listnav">
+        <div class="container">
+            <h1 class="listlogo"></h1>
+            <!-- menu -->
+            <div class="clearfix">
+                <ul class="menulist pull-right">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">订票中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="xglist.html"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="cflist.html"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="collect.html"><i class="i9"></i>我的收藏</a></li>
+                            <li><a href="shopping.html"><i class="i8"></i>购物车</a></li>
+                            <li><a href="order.html"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="Norder.html"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="Logistics.html"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="proshow.html"><i class="i6"></i>商品展示</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">活动中心</a></li>
+                    <li><a href="#">交流中心</a></li>
+                    <li><a href="#">我的业绩</a></li>
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="container pr listcon scrollcontainer">
+        <!-- 右侧浮动菜单 -->
+        <div class="pinned">
+            <div class="listsidertools">
+                <a href="shopping.html">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div>购物车</div>
+                    <b>2</b>
+                </a>
+                <a href="#">
+                    <i class="fa fa-chevron-up"></i>
+                    <div>顶部</div>
+                </a>
+            </div>
+        </div>
+        <!-- 页面标题+面包屑导航 -->
+        <h1 class="pagetitle">
+            选购目录
+            <div class="pull-right f14">
+                当前位置：订票中心><span class="font-org">购物车</span>
+            </div>
+        </h1>
+        <table class="table prolisttable">
+            <thead>
+                <tr>
+                    <th class="text-left" width="110">
+                        <div class="pl20">
+                            <input type="checkbox" checked class="js-sel-all"><span class="ml10">全选</span>
+                        </div>
+                    </th>
+                    <th class="text-left">游戏</th>
+                    <th>单价(元)</th>
+                    <th>订购包裹</th>
+                    <th width="115">小计(元)</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">
+                        <div class="pl20">
+                            <input type="checkbox" checked class="listinput">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pro-moreinfo clearfix">
+                            <a class="proimg" href="proinfo.html">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </a>
+                            <div class="text">
+                                <h4 class="mt0 pt5"><a href="proinfo.html">天下名钻</a></h4>
+                                <p>面值5元，起订1包，续订1包</p>
+                                <div>游戏玩法：刮开覆盖膜，如果你的号码中的任意...<a href="#" data-toggle="popover" data-placement="top" data-content="游戏玩法：刮开覆盖膜，如果你的号码中的任意一个号码与中奖号码之一相同。将中的改号码下方所示的金额，如果出现“红”标志，即中得改标志下方所示金额的两倍，如果出现“灯笼”标志，即中得该标志下方所示金额的五倍，如果出现“中国结”的标志，即中得刮开区所示金额的20个金额之和。如果在幸运区出现金额标志，即中得该金额。兼中兼得。" class="font-org">详情>></a></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>600</td>
+                    <td>
+                        <div class="input-prepend input-append priceChange">
+                            <a href="javascript:;" class="add-on js-minusbtn">-</a>
+                            <input class="span1 priceInput js-bag-num" type="text" value="1">
+                            <a href="javascript:;" class="add-on js-addbtn">+</a>
+                        </div>
+                    </td>
+                    <td><b class="font-org js-price">1200</b></td>
+                    <td><a href="#" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <div class="pl20">
+                            <input type="checkbox" checked class="listinput">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pro-moreinfo clearfix">
+                            <a class="proimg" href="proinfo.html">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </a>
+                            <div class="text">
+                                <h4 class="mt0 pt5"><a href="proinfo.html">天下名钻</a></h4>
+                                <p>面值5元，起订1包，续订1包</p>
+                                <div>游戏玩法：刮开覆盖膜，如果你的号码中的任意...<a href="#" data-toggle="popover" data-placement="top" data-content="游戏玩法：刮开覆盖膜，如果你的号码中的任意一个号码与中奖号码之一相同。将中的改号码下方所示的金额，如果出现“红”标志，即中得改标志下方所示金额的两倍，如果出现“灯笼”标志，即中得该标志下方所示金额的五倍，如果出现“中国结”的标志，即中得刮开区所示金额的20个金额之和。如果在幸运区出现金额标志，即中得该金额。兼中兼得。" class="font-org">详情>></a></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>600</td>
+                    <td>
+                        <div class="input-prepend input-append priceChange">
+                            <a href="javascript:;" class="add-on js-minusbtn">-</a>
+                            <input class="span1 priceInput js-bag-num" type="text" value="1">
+                            <a href="javascript:;" class="add-on js-addbtn">+</a>
+                        </div>
+                    </td>
+                    <td><b class="font-org js-price">1200</b></td>
+                    <td><a href="#" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <div class="pl20">
+                            <input type="checkbox" checked class="listinput">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="pro-moreinfo clearfix">
+                            <a class="proimg" href="proinfo.html">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </a>
+                            <div class="text">
+                                <h4 class="mt0 pt5"><a href="proinfo.html">天下名钻</a></h4>
+                                <p>面值5元，起订1包，续订1包</p>
+                                <div>游戏玩法：刮开覆盖膜，如果你的号码中的任意...<a href="#" data-toggle="popover" data-placement="top" data-content="游戏玩法：刮开覆盖膜，如果你的号码中的任意一个号码与中奖号码之一相同。将中的改号码下方所示的金额，如果出现“红”标志，即中得改标志下方所示金额的两倍，如果出现“灯笼”标志，即中得该标志下方所示金额的五倍，如果出现“中国结”的标志，即中得刮开区所示金额的20个金额之和。如果在幸运区出现金额标志，即中得该金额。兼中兼得。" class="font-org">详情>></a></div>
+                            </div>
+                        </div>
+                    </td>
+                    <td>600</td>
+                    <td>
+                        <div class="input-prepend input-append priceChange">
+                            <a href="javascript:;" class="add-on js-minusbtn">-</a>
+                            <input class="span1 priceInput js-bag-num" type="text" value="1">
+                            <a href="javascript:;" class="add-on js-addbtn">+</a>
+                        </div>
+                    </td>
+                    <td><b class="font-org js-price">1800</b></td>
+                    <td><a href="#" class="btn btn-default js-del-one">删除</a></td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <div class="pl20">
+                            <input type="checkbox" checked class="js-sel-all"><b class="ml10">全选</b>
+                        </div>
+                    </td>
+                    <td class="text-left">
+                        <a href="#" class="font-org js-del-more">删除选中的商品</a>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td><b class="font-org" id="js-totle">总价：0</b></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-right pb20 pr30">
+            <a class="btn btn-success btn-large w100 mr20" href="xglist.html">继续购物</a>
+            <a class="btn btn-warning btn-large w100" href="#myModal" role="button" data-toggle="modal">去结算</a>
+        </div>
+        <div class="clearfix pb20">
+            <div class="col-50 text-center pb20 pse-border-right">
+                <h3 class="list-boxtitle"><b>新票推荐</b></h3>
+                <!-- 新票推荐 -->
+                <div id="Carousel2" class="carousel slide pro-carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel2" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel2" data-slide-to="1"></li>
+                        <li data-target="#Carousel2" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有12次中奖机会</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">最高奖金100000元</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/675645.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有15次中奖机会</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/34.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿2</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有12次中奖机会</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/2345465.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿2</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">最高奖金100000元</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/2354265.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿2</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有15次中奖机会</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/4354657.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿3</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有12次中奖机会</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/9786756.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿3</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">最高奖金100000元</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>翡翠绿3</p>
+                                        <div class="lighttip">上市日期：2017-10-03</div>
+                                        <div class="lighttip">共有15次中奖机会</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#Carousel2" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#Carousel2" data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+            <div class="col-50 text-center pb20">
+                <h3 class="list-boxtitle"><b>热点推荐</b></h3>
+                <!-- 热点推荐 -->
+                <div id="Carousel3" class="carousel slide pro-carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#Carousel3" data-slide-to="0" class="active"></li>
+                        <li data-target="#Carousel3" data-slide-to="1"></li>
+                        <li data-target="#Carousel3" data-slide-to="2"></li>
+                    </ol>
+                    <!-- Carousel items -->
+                    <div class="carousel-inner">
+                        <div class="active item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/098.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金2</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/231.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金2</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/234.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金2</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item">
+                            <ul class="prolist clearfix grid-3">
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/254.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金3</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/354.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金3</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <div class="img"><img src="img/tmp/435.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                                        <p>点石成金3</p>
+                                        <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                                        <div class="lighttip">中奖率80%</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- Carousel nav -->
+                    <a class="carousel-control left" href="#Carousel3" data-slide="prev">&lsaquo;</a>
+                    <a class="carousel-control right" href="#Carousel3" data-slide="next">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="container">
+            <div class="clearfix mb20">
+                <ul class="footlink pull-left">
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">网站手册</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">培训资料</a></li>
+                    <li><a href="#">彩票知识</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#"><i class="fa fa-comments-o mr5"></i>网点讨论</a></li>
+                    <li><a href="#"><i class="fa fa-commenting-o mr5"></i>网点留言</a></li>
+                    <li><a href="#"><i class="fa fa-edit mr5"></i>在线调研</a></li>
+                </ul>
+            </div>
+            <div class="friendcon con">
+                <a href="javascript:;" class="pa-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                <span class="pa-left">友情链接：</span>
+                <div class="body">
+                    <ul class="clearfix linklist prolist js-conbody">
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomtext">
+                版权所有©山东浪潮新世纪科技有限公司
+            </div>
+        </div>
+    </div>
+    <!-- Modal-金额提示 -->
+    <div id="myModal" class="modal hide fade modal-smll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-body">
+            <h4 class="text-center mt0">提示<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></h4>
+            
+            <p class="text-center p25">
+                <i class="alert-tio-warning mr10 fa fa-exclamation"></i><span class="vm f16">您的购物车金额需大于起订金额(2400元)，请继续添加商品！</span>
+            </p>
+            <div class="text-center p20">
+                <a class="btn btn-warning btn-large w100 js-close-modal" href="SubOrder.html">确定</a>
+            </div>
+        </div>
+    </div>
+    <!-- js引用部分↓ -->
+    <!-- jQuery通用库 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap-js -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.pin.js"></script>
+    <!-- 自定义checkbox -->
+    <link href="css/flat/orange.css" rel="stylesheet">
+    <script src="js/icheck.min.js"></script>
+    <!-- ui新建js-js -->
+    <script src="js/plugins.js"></script>
+    <script>
+    $(document).ready(function() {
+        $(".pinned").pin({
+            containerSelector: ".scrollcontainer"
+        });
+        $('a[data-toggle="popover"]').popover();
+        $('input').iCheck({
+            checkboxClass: 'icheckbox_flat-orange',
+            radioClass: 'iradio_flat-orange'
+        });
+    });
+    </script>
+    <!-- js引用部分↑ -->
+</body>
+
+</html>

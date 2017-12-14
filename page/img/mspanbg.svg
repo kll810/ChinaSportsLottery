@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="31px" height="87px" viewBox="0 0 31 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>mspanbg</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="30" height="86"></rect>
+    </defs>
+    <g id="Page-2" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="图标元素" transform="translate(-414.000000, -888.000000)">
+            <g id="吉首" transform="translate(413.000000, 888.000000)">
+                <g id="span" transform="translate(1.048327, 0.093023)">
+                    <g id="mspanbg">
+                        <g id="span-bg">
+                            <use fill-opacity="0.05" fill="#FFC000" fill-rule="evenodd" xlink:href="#path-1"></use>
+                            <rect stroke-opacity="0.3" stroke="#FFC000" stroke-width="1" x="0.5" y="0.5" width="29" height="85"></rect>
+                        </g>
+                        <path d="M0.5,0 L0,0 L0,8 L1,8 L1,1 L8,1 L8,0 L0.5,0 Z" id="1" fill="#FFC000"></path>
+                        <path d="M22.5,0 L22,0 L22,8 L23,8 L23,1 L30,1 L30,0 L22.5,0 Z" id="2" fill="#FFC000" transform="translate(26.000000, 4.000000) scale(-1, 1) translate(-26.000000, -4.000000) "></path>
+                        <path d="M22.5,78 L22,78 L22,86 L23,86 L23,79 L30,79 L30,78 L22.5,78 Z" id="3" fill="#FFC000" transform="translate(26.000000, 82.000000) scale(-1, -1) translate(-26.000000, -82.000000) "></path>
+                        <path d="M0.5,78 L0,78 L0,86 L1,86 L1,79 L8,79 L8,78 L0.5,78 Z" id="4" fill="#FFC000" transform="translate(4.000000, 82.000000) scale(1, -1) translate(-4.000000, -82.000000) "></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

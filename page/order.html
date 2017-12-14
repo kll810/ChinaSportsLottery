@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国体育彩票-订单查询</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 日历插件样式 -->
+    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <!-- 页面基础样式 -->
+    <link href="css/uiStyle.css" rel="stylesheet">
+    <script>
+    /******最完美解决 图片在图片框内按宽高比例自动缩放！！！***/
+    //Img:要放图片的img元素，onload时传参可用this
+    //maxHeight  :img元素的高度，像素（图片框 最大高度）
+    //maxWidth:img元素的宽度，像素（图片框 最大宽度）
+    function AutoSize(Img, maxWidth, maxHeight) {
+        var image = new Image();
+        //原图片原始地址（用于获取原图片的真实宽高，当<img>标签指定了宽、高时不受影响）
+        image.src = Img.src;
+        // 当图片比图片框小时不做任何改变 
+        if (image.width < maxWidth && image.height < maxHeight) {
+            Img.width = image.width;
+            Img.height = image.height;
+        } else //原图片宽高比例 大于 图片框宽高比例,则以框的宽为标准缩放，反之以框的高为标准缩放
+        {
+            if (maxWidth / maxHeight <= image.width / image.height) //原图片宽高比例 大于 图片框宽高比例
+            {
+                Img.width = maxWidth; //以框的宽度为标准
+                Img.height = maxWidth * (image.height / image.width);
+            } else { //原图片宽高比例 小于 图片框宽高比例
+                Img.width = maxHeight * (image.width / image.height);
+                Img.height = maxHeight; //以框的高度为标准
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- min导航 -->
+    <div class="min-nav">
+        <div class="container">
+            <span class="mr10">欢迎您：山东测试账号</span>
+            <a href="#" class="ml10 mr10">修改密码</a>
+            <a href="#" class="ml10 mr10"><i class="fa fa-power-off mr5"></i>退出系统</a>
+            <a href="#" class="ml10 pull-right">加入收藏</a>
+            <span class="pull-right">|</span>
+            <a href="#" class="ml10 mr10 pull-right">设为首页</a>
+        </div>
+    </div>
+    <!-- 长banner -->
+    <div class="banner1">
+        <div class="container"><img src="img/banner2.png" width="100%"></div>
+    </div>
+    <!-- 导航 -->
+    <div class="nav listnav">
+        <div class="container">
+            <h1 class="listlogo"></h1>
+            <!-- menu -->
+            <div class="clearfix">
+                <ul class="menulist pull-right">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">订票中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="xglist.html"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="cflist.html"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="collect.html"><i class="i9"></i>我的收藏</a></li>
+                            <li><a href="shopping.html"><i class="i8"></i>购物车</a></li>
+                            <li><a href="order.html"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="Norder.html"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="Logistics.html"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="proshow.html"><i class="i6"></i>商品展示</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">活动中心</a></li>
+                    <li><a href="#">交流中心</a></li>
+                    <li><a href="#">我的业绩</a></li>
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="container pr listcon scrollcontainer">
+        <!-- 页面标题+面包屑导航 -->
+        <h1 class="pagetitle">
+            订单查询
+            <div class="pull-right f14">
+                当前位置：订票中心><span class="font-org">订单查询</span>
+            </div>
+        </h1>
+        <!-- 搜索 -->
+        <div class="p20">
+            <form class="form-inline">
+                <label for="" class="control-label mr10 ml10 mb0">彩票编号</label>
+                <input type="text" class="" placeholder="请输入彩票编号">
+                <label for="" class="control-label mr10 ml10 mb0">彩票名称</label>
+                <input type="text" class="" placeholder="请输入彩票名称">
+                <label for="" class="control-label mr10 ml10 mb0">订单编号</label>
+                <input type="text" class="" placeholder="请输入订单编号">
+            </form>
+            <form class="form-inline">
+                <label for="" class="control-label mr10 ml10 mb0">订单时间</label>
+                <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input type="text" class="" placeholder="2017-12-13" readonly>
+                    <span class="add-on"><i class="fa fa-calendar"></i></span>
+                </span>
+                <input type="hidden" id="dtp_input2" value="" />
+                <label for="" class="control-label mr10 ml10 mb0">至</label>
+                <span class="pr input-append calendarline date form_date" data-date="" data-date-format="yyyy MM dd" data-link-field="dtp_input1" data-link-format="yyyy-mm-dd">
+                    <input type="text" class="" placeholder="2017-12-13" readonly>
+                    <span class="add-on"><i class="fa fa-calendar"></i></span>
+                </span>
+                <input type="hidden" id="dtp_input1" value="" />
+            </form>
+            <div class="text-center">
+                <button class="btn btn-warning w100" type="button">查询</button>
+            </div>
+        </div>
+        <!-- 订单列表-列表表头 -->
+        <table class="table prolisttable">
+            <thead>
+                <tr class="orderhead">
+                    <th width="120">彩票编号</th>
+                    <th>彩票名称</th>
+                    <th width="100">面值(元)</th>
+                    <th width="100">每包金额</th>
+                    <th width="100">订购包数</th>
+                    <th width="100">合计(元)</th>
+                    <th width="100">订单总金额(元)</th>
+                    <th width="100">状态</th>
+                    <th width="150">办结时间</th>
+                </tr>
+            </thead>
+        </table>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0237</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/4.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">
+                            <p>已提交</p>
+                            <p><a href="checklog1.html">查看物流</a></p>
+                            <p><a href="checkloginfo3.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="1" class="borderleft">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0238</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="3" class="borderleft">1200元</td>
+                        <td width="100" rowspan="3" class="borderleft">
+                            <p>已取消</p>
+                            <p><a href="checklog2.html">查看物流</a></p>
+                            <p><a href="checkloginfo4.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="3" class="borderleft">2017-11-22</td>
+                    </tr>
+                    <tr>
+                        <td width="120">0244</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/09.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                    </tr>
+                    <tr>
+                        <td width="120">0225</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/32.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0238</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="3" class="borderleft">1200元</td>
+                        <td width="100" rowspan="3" class="borderleft">
+                            <p>已取消</p>
+                            <p><a href="checklog1.html">查看物流</a></p>
+                            <p><a href="checkloginfo4.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="3" class="borderleft">2017-11-22</td>
+                    </tr>
+                    <tr>
+                        <td width="120" colspan="6"><i class="fa fa-ellipsis-v f18 lighttip"></i></td>
+                    </tr>
+                    <tr>
+                        <td width="120">0225</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0237</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/234.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">
+                            <p>已打包</p>
+                            <p><a href="checklog1.html">查看物流</a></p>
+                            <p><a href="checkloginfo2.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="1" class="borderleft">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0237</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/254.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">
+                            <p>已完成</p>
+                            <p><a href="checklog1.html">查看物流</a></p>
+                            <p><a href="checkloginfo1.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="1" class="borderleft">2017-10-11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 一条订单信息 -->
+        <div class="orderlistcon">
+            <div class="title">
+                <span class="mr50">订单编号：320121a0120150827TX8B</span>
+                <span>创建订单时间：2017-10-11 17:20:33</span>
+            </div>
+            <table class="table prolisttable">
+                <tbody>
+                    <tr>
+                        <td width="120">0237</td>
+                        <td>
+                            <a href="proinfo.html">
+                                <span class="proimg">
+                                <img src="img/tmp/354.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                            </span>
+                                <span class="protitle">天下名钻</span>
+                            </a>
+                        </td>
+                        <td width="100">10元</td>
+                        <td width="100">600元</td>
+                        <td width="100">2包</td>
+                        <td width="100">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">1200元</td>
+                        <td width="100" rowspan="1" class="borderleft">
+                            <p>已完成</p>
+                            <p><a href="checklog1.html">查看物流</a></p>
+                            <p><a href="checkloginfo1.html">查看订单详情</a></p>
+                        </td>
+                        <td width="150" rowspan="1" class="borderleft">2017-10-11</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- 分页 -->
+        <div class="text-center">
+            <ul class="pager">
+                <li><i class=" mr10">共118条纪录，当前第1条到第10条</i></li>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">上一页</a></li>
+                <li><a href="#">下一页</a></li>
+                <li><a href="#">末页</a></li>
+                <li><i class="vm ml20">每页</i>
+                    <select name="" id="" class="vm mb0 ml10" style="width:50px;">
+                        <option value="">1</option>
+                    </select>
+                </li>
+                <li><i class="vm ml20">转到</i>
+                    <select name="" id="" class="vm mb0 ml10" style="width:50px;">
+                        <option value="">1</option>
+                    </select><i class="vm ml10">页</i></li>
+            </ul>
+        </div>
+        <!-- 热点推荐轮播 -->
+        <div class="mt10 listw190 text-center bordertop bw2">
+            <h3 class="list-boxtitle"><b>热点推荐</b></h3>
+            <div class="box">
+                <span class="prev"><i class="fa fa-chevron-left"></i></span>
+                <dl id="roll">
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                    <dd>
+                        <a href="#">
+                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
+                            <p>点石成金</p>
+                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="lighttip">中奖率80%</div>
+                        </a>
+                    </dd>
+                </dl>
+                <span class="next"><i class="fa fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="container">
+            <div class="clearfix mb20">
+                <ul class="footlink pull-left">
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">网站手册</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">培训资料</a></li>
+                    <li><a href="#">彩票知识</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#"><i class="fa fa-comments-o mr5"></i>网点讨论</a></li>
+                    <li><a href="#"><i class="fa fa-commenting-o mr5"></i>网点留言</a></li>
+                    <li><a href="#"><i class="fa fa-edit mr5"></i>在线调研</a></li>
+                </ul>
+            </div>
+            <div class="friendcon con">
+                <a href="javascript:;" class="pa-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                <span class="pa-left">友情链接：</span>
+                <div class="body">
+                    <ul class="clearfix linklist prolist js-conbody">
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomtext">
+                版权所有©山东浪潮新世纪科技有限公司
+            </div>
+        </div>
+    </div>
+    <!-- js引用部分↓ -->
+    <!-- jQuery通用库 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap-js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- 日历 -->
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.min.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="js/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+    <!-- ui新建js-js -->
+    <script src="js/plugins.js"></script>
+    <script>
+    $(document).ready(function() {
+        $("#roll").parallelRoll({
+            amount: 1,
+            direction: 'left',
+            prev: 'next',
+            //向上
+            next: 'prev',
+            //向下
+            time: 10000,
+        });
+        $('.form_date').datetimepicker({
+            language: 'zh-CN',
+            weekStart: 1,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            format: "yyyy-mm-dd",
+        });
+    });
+    </script>
+    <!-- js引用部分↑ -->
+</body>
+
+</html>
