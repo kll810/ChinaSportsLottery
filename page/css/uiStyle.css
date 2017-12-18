@@ -2802,7 +2802,9 @@ table.table .text-left {
 }
 .btn-default {
     background: #e2e2e2;
-    color: #3e3e3e
+    color: #3e3e3e;
+    padding: 8px 12px;
+    border:none;
 }
 .btn-success {
     color: #ffffff;
@@ -3228,17 +3230,21 @@ table.table .text-left {
     color: #fff;
     text-align: center;
 }
-.yjlist span.td1 {
+.yjlist span.yjtd1 {
     width: 80px;
+    float: left;
 }
-.yjlist span.td2 {
+.yjlist span.yjtd2 {
     width: 200px;
+    float: left;
 }
-.yjlist span.td3 {
+.yjlist span.yjtd3 {
     width: 220px;
+    float: left;
 }
 .yjlist .list li {
     padding: 0;
+    overflow: hidden;
 }
 .yjlist .list li span {
     color: #181818
@@ -3256,21 +3262,26 @@ table.table .text-left {
     background: #cecece;
     box-shadow: none;
     vertical-align: middle;
+    filter:none;
 }
 .progress-min .bar {
     border-radius: 6px;
 }
 .progress-red .bar {
-    background: #ff3b3b
+    background: #ff3b3b;
+    filter:none;
 }
 .progress-blue .bar {
-    background: #54bdfd
+    background: #54bdfd;
+    filter:none;
 }
 .progress-green .bar {
-    background: #4ac94a
+    background: #4ac94a;
+    filter:none;
 }
 .progress-yellow .bar {
-    background: #fabf17
+    background: #fabf17;
+    filter:none;
 }
 .tab-content {
     overflow: visible;
@@ -3617,4 +3628,37 @@ table.table .text-left {
     -webkit-border-radius: 6px;
     -moz-border-radius: 6px;
     border-radius: 6px;
+}
+.ser-form-box {
+    width: 700px;
+    margin: 0 auto;
+    position: relative;
+    left: -30px;
+}
+.ser-form-box input[type="text"],.ser-form-box textarea{
+    width: 360px;
+}
+/* 帮助 */
+.faqi1,.faqi2,.faqi3,.faqi4,.faqi5{
+    display: inline-block;
+    background: url(../img/menuicon-min.png) -87px -153px no-repeat;
+    width: 35px;
+    height: 24px;
+    vertical-align: middle;
+}
+.faqi2{
+    background-position:-85px -100px ;
+    height: 27px;
+}
+.faqi3{
+    background-position: -84px -200px;
+    height: 21px;
+}
+.faqi4{
+    background-position: -86px -246px;
+    height: 21px;
+}
+.faqi5{
+    background-position: -82px -53px;
+    height: 21px;
 }
