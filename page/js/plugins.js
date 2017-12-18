@@ -187,6 +187,35 @@ $(document).ready(function() {
     $('.js-close-modal').click(function() {
         $('.modal').modal('hide')
     })
+    //添加关注动作;添加赞-disinfo
+    $('.js-add-attention').click(function(){
+        if($(this).hasClass("active")){
+            $(this).removeClass("active").html('<i class="fa fa-star-o vm f26 mr5 lighttip "></i><span class="vm lighttip ">+关注</span>')
+        }else{
+            $(this).addClass("active").html('<i class="fa fa-star font-org vm f26 mr5"></i><span class="vm">已关注</span>')
+        }
+    });
+    $('.js-add-favour').click(function(){
+        var num=parseInt($(this).children("span").text());
+        if(!num) num=0;
+        if($(this).hasClass("active")){
+            $(this).removeClass("active").html('<i class="fa fa-thumbs-up vm"></i><span class="vm ml5">'+(num-1)+'</span>')
+        }else{
+            $(this).addClass("active").html('<i class="fa fa-thumbs-up vm font-org"></i><span class="vm ml5">'+(num+1)+'</span>')
+        }
+    })
+    //我的评论打开关闭-dis2
+    $('.js-open-replybox').click(function(){
+        if($(this).parent("p").siblings(".dis-replylist").is(':hidden'))
+        {
+            $(this).parent("p").siblings(".dis-replylist").show();
+            $(this).addClass("open");
+        }
+        else{
+            $(this).parent("p").siblings(".dis-replylist").hide();
+            $(this).removeClass("open");
+        }
+    })
 });
 //购物车总价计算-shopping
 $(document).ready(function() {

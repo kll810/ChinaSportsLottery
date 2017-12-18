@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>中国体育彩票-我的关注</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 页面基础样式 -->
+    <link href="css/uiStyle.css" rel="stylesheet">
+    <script>
+    /******最完美解决 图片在图片框内按宽高比例自动缩放！！！***/
+    //Img:要放图片的img元素，onload时传参可用this
+    //maxHeight  :img元素的高度，像素（图片框 最大高度）
+    //maxWidth:img元素的宽度，像素（图片框 最大宽度）
+    function AutoSize(Img, maxWidth, maxHeight) {
+        var image = new Image();
+        //原图片原始地址（用于获取原图片的真实宽高，当<img>标签指定了宽、高时不受影响）
+        image.src = Img.src;
+        // 当图片比图片框小时不做任何改变 
+        if (image.width < maxWidth && image.height < maxHeight) {
+            Img.width = image.width;
+            Img.height = image.height;
+        } else //原图片宽高比例 大于 图片框宽高比例,则以框的宽为标准缩放，反之以框的高为标准缩放
+        {
+            if (maxWidth / maxHeight <= image.width / image.height) //原图片宽高比例 大于 图片框宽高比例
+            {
+                Img.width = maxWidth; //以框的宽度为标准
+                Img.height = maxWidth * (image.height / image.width);
+            } else { //原图片宽高比例 小于 图片框宽高比例
+                Img.width = maxHeight * (image.width / image.height);
+                Img.height = maxHeight; //以框的高度为标准
+            }
+        }
+    }
+    </script>
+</head>
+
+<body>
+    <!-- min导航 -->
+    <div class="min-nav">
+        <div class="container">
+            <span class="mr10">欢迎您：山东测试账号</span>
+            <a href="#" class="ml10 mr10">修改密码</a>
+            <a href="#" class="ml10 mr10"><i class="fa fa-power-off mr5"></i>退出系统</a>
+            <a href="#" class="ml10 pull-right">加入收藏</a>
+            <span class="pull-right">|</span>
+            <a href="#" class="ml10 mr10 pull-right">设为首页</a>
+        </div>
+    </div>
+    <!-- 长banner -->
+    <div class="banner1">
+        <div class="container"><img src="img/banner2.png" width="100%"></div>
+    </div>
+    <!-- 导航 -->
+    <div class="nav listnav">
+        <div class="container">
+            <h1 class="listlogo"></h1>
+            <!-- menu -->
+            <div class="clearfix">
+                <ul class="menulist pull-right">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">订票中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="xglist.html"><i class="i1"></i>选购目录</a></li>
+                            <li><a href="cflist.html"><i class="i2"></i>彩票分析</a></li>
+                            <li><a href="collect.html"><i class="i9"></i>我的收藏</a></li>
+                            <li><a href="shopping.html"><i class="i8"></i>购物车</a></li>
+                            <li><a href="order.html"><i class="i4"></i>订单查询</a></li>
+                            <li><a href="Norder.html"><i class="i3"></i>当前订单</a></li>
+                            <li><a href="Logistics.html"><i class="i5"></i>物流查询</a></li>
+                            <li><a href="proshow.html"><i class="i6"></i>商品展示</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">活动中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="activity.html"><i class="i20"></i>营销活动</a></li>
+                            <li><a href="feedback.html"><i class="i21"></i>站点回馈</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">交流中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="discuss.html"><i class="i10"></i>网点讨论</a></li>
+                            <li><a href="service.html"><i class="i11"></i>在线客服</a></li>
+                            <li><a href="survey.html"><i class="i12"></i>在线调研</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">我的业绩</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="Sales.html"><i class="i13"></i>销量分析</a></li>
+                            <li><a href="ranking.html"><i class="i14"></i>我的排名</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">培训中心</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="material.html"><i class="i15"></i>培训资料</a></li>
+                            <li><a href="knowledge.html"><i class="i16"></i>彩票知识</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">帮助</a>
+                        <ul class="dropdown-menu sider-menu" role="menu" aria-labelledby="dLabel">
+                            <li><a href="notebook.html"><i class="i17"></i>网站手册</a></li>
+                            <li><a href="FAQ.html"><i class="i18"></i>常见问题</a></li>
+                            <li><a href="Help.html"><i class="i19"></i>新手指南</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="container pr listcon">
+        <!-- 页面标题+面包屑导航 -->
+        <h1 class="pagetitle">
+            个人中心
+            <div class="pull-right f14">
+                当前位置：首页><span class="font-org">个人中心</span>
+            </div>
+        </h1>
+        <div class="snsbody pr">
+            <div class="sns-sidermenu">
+                <ul class="list">
+                    <li>
+                        <div>账户中心</div>
+                        <ul>
+                            <li><a href="sns.html">账户主页</a></li>
+                            <li><a href="sns1.html">个人信息</a></li>
+                            <li><a href="sns2.html">账户信息</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>消息中心</div>
+                        <ul>
+                            <li><a href="sns3.html">我的消息</a></li>
+                            <li><a href="sns4.html">中奖纪录</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>订单中心</div>
+                        <ul>
+                            <li><a href="sns5.html">我的订单</a></li>
+                            <li class="active"><a href="sns6.html">我的关注</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div>业绩中心</div>
+                        <ul>
+                            <li><a href="sns7.html">我的业绩</a></li>
+                            <li><a href="sns8.html">我的排名</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- 个人信息-s -->
+            <div class="con">
+                <div class="clearfix pl20 pt10 ">
+                    <h4 class="pull-left">我的关注</h4>
+                </div>
+                <div class="p20">
+                    <ul class="prolist clearfix">
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/4.png" width="180" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/09.png" width="180" height="179" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/32.png" width="120" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/34.png" width="115" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/46.png" width="180" height="104" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/54.png" width="122" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/78.png" width="119" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/098.png" width="180" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/231.png" width="120" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/234.png" width="90" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/254.png" width="162" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/354.png" width="180" height="119" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/435.png" width="154" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/452.png" width="180" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/455.png" width="180" height="108" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/543.png" width="90" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/546.png" width="178" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/564.png" width="120" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/657.png" width="180" height="108" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="proinfo.html">
+                                <div class="img"><img src="img/tmp/687.png" width="119" height="180" onload="AutoSize(this,180,180)"></div>
+                                <p>翡翠绿</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 个人中心详情-e -->
+        </div>
+    </div>
+    <!-- 底部 -->
+    <div class="foot">
+        <div class="container">
+            <div class="clearfix mb20">
+                <ul class="footlink pull-left">
+                    <li><a href="#">帮助</a></li>
+                    <li><a href="#">新手指南</a></li>
+                    <li><a href="#">网站手册</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#">培训中心</a></li>
+                    <li><a href="#">培训资料</a></li>
+                    <li><a href="#">彩票知识</a></li>
+                </ul>
+                <ul class="footlink pull-left">
+                    <li><a href="#" class="mb10"><i class="i-f-dis vm"></i><span class="vm">网点讨论</span></a></li>
+                    <li><a href="#" class="mb10"><i class="i-f-ser vm"></i><span class="vm">在线客服</span></a></li>
+                    <li><a href="#" class="mb10"><i class="i-f-sur vm"></i><span class="vm">在线调研</span></a></li>
+                </ul>
+            </div>
+            <div class="friendcon con">
+                <a href="javascript:;" class="pa-right f14 js-OpenBody">展开<i class="fa fa-caret-down ml5"></i></a>
+                <span class="pa-left">友情链接：</span>
+                <div class="body">
+                    <ul class="clearfix linklist prolist js-conbody">
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                山东省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                江苏省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                浙江省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                河北省体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                上海市体彩网
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                广州省体彩网
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="bottomtext">
+                版权所有©山东浪潮新世纪科技有限公司
+            </div>
+        </div>
+    </div>
+    <!-- js引用部分↓ -->
+    <!-- jQuery通用库 -->
+    <script src="js/jquery.min.js"></script>
+    <!-- bootstrap-js -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- ui新建js-js -->
+    <script src="js/plugins.js"></script>
+    <!-- js引用部分↑ -->
+</body>
+
+</html>
