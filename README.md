@@ -1,2 +1,62 @@
 # ChinaSportsLottery
 中国体育彩票项目
+activity.html //营销活动列表
+analyzeinfo.html //彩票分析-详情
+ApAccount.html //网点申请流程
+cflist.html //彩票分析列表
+checklog1.html//物流查询
+checklog2.html//暂无物流信息提示
+checkloginfo1.html//订单查询-已完成
+checkloginfo2.html//订单查询-已打包
+checkloginfo3.html//订单查询-已提交
+checkloginfo4.html//订单查询-已取消
+collect-null.html//空购物车
+collect.html//我的收藏
+dis2.html//交流中心-网点讨论-我的评论-列表
+dis3.html//交流中心-网点讨论-我的关注-列表
+discuss.html//交流中心-网点讨论-列表
+discuss2.html//交流中心-网点讨论-搜索结果
+disinfo.html//交流中心-网点讨论-详情
+djinfo.html//大奖赏析详情
+djlist.html//大奖赏析列表
+FAQ.html//帮助-常见问题
+Guestbook.html//访客留言
+Help.html//新手指南
+index.html//首页
+inform.html//通知公告-详情
+informList.html//通知公告-列表
+login.html//登陆
+Logistics.html//物流查询-列表
+material.html//培训资料列表
+Norder.html//订单查询-暂时未提交订单
+notebook.html//网站手册
+order.html//订单查询列表
+OrderOk.html//完成订单
+passwd.html//修改密码
+proinfo.html//产品详情
+proshow.html//商品展示
+ranking.html//我的排名
+rdlist.html//热点推荐
+ResetPwd.html//重置密码
+ResetPwd2.html//重置密码第二步
+Sales.html//销量分析
+service.html//在线客服
+serviceinfo.html//在线客服详情
+shopping-null.html//购物车-空
+shopping.html//购物车
+sns.html//个人中心首页
+sns1.html//个人中心-个人信息
+sns2.html//个人中心-账户信息
+sns3.html//个人中心-我的消息
+sns3info.html//个人中心-我的消息详情
+sns4.html//个人中心-中奖纪录
+sns5.html//个人中心-我的订单
+sns6.html//个人中心-我的关注
+sns7.html//个人中心-我的业绩
+sns8.html//个人中心-我的排名
+SubOrder.html//购物车-去结算
+survey.html//交流中心-在线调研
+trial.html//彩票分析-试玩
+userinfo.html//个人信息
+VoucherFlow.html//充值流程
+xglist.html//选购目录
