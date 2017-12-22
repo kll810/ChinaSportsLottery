@@ -185,36 +185,65 @@ $(document).ready(function() {
         })
         //手动关闭模态窗口
     $('.js-close-modal').click(function() {
-        $('.modal').modal('hide')
-    })
-    //添加关注动作;添加赞-disinfo
-    $('.js-add-attention').click(function(){
-        if($(this).hasClass("active")){
+            $('.modal').modal('hide')
+        })
+        //添加关注动作;添加赞-disinfo
+    $('.js-add-attention').click(function() {
+        if ($(this).hasClass("active")) {
             $(this).removeClass("active").html('<i class="fa fa-star-o vm f26 mr5 lighttip "></i><span class="vm lighttip ">+关注</span>')
-        }else{
+        } else {
             $(this).addClass("active").html('<i class="fa fa-star font-org vm f26 mr5"></i><span class="vm">已关注</span>')
         }
     });
-    $('.js-add-favour').click(function(){
-        var num=parseInt($(this).children("span").text());
-        if(!num) num=0;
-        if($(this).hasClass("active")){
-            $(this).removeClass("active").html('<i class="fa fa-thumbs-up vm"></i><span class="vm ml5">'+(num-1)+'</span>')
-        }else{
-            $(this).addClass("active").html('<i class="fa fa-thumbs-up vm font-org"></i><span class="vm ml5">'+(num+1)+'</span>')
-        }
-    })
-    //我的评论打开关闭-dis2
-    $('.js-open-replybox').click(function(){
-        if($(this).parent("p").siblings(".dis-replylist").is(':hidden'))
-        {
-            $(this).parent("p").siblings(".dis-replylist").show();
-            $(this).addClass("open");
-        }
-        else{
-            $(this).parent("p").siblings(".dis-replylist").hide();
-            $(this).removeClass("open");
-        }
+    $('.js-add-favour').click(function() {
+            var num = parseInt($(this).children("span").text());
+            if (!num) num = 0;
+            if ($(this).hasClass("active")) {
+                $(this).removeClass("active").html('<i class="fa fa-thumbs-up vm"></i><span class="vm ml5">' + (num - 1) + '</span>')
+            } else {
+                $(this).addClass("active").html('<i class="fa fa-thumbs-up vm font-org"></i><span class="vm ml5">' + (num + 1) + '</span>')
+            }
+        })
+        //我的评论打开关闭-dis2
+    $('.js-open-replybox').click(function() {
+            if ($(this).parent("p").siblings(".dis-replylist").is(':hidden')) {
+                $(this).parent("p").siblings(".dis-replylist").show();
+                $(this).addClass("open");
+            } else {
+                $(this).parent("p").siblings(".dis-replylist").hide();
+                $(this).removeClass("open");
+            }
+        })
+        //添加收藏
+    $('.js-add-xc').click(function() {
+            $(this).toggleClass("active");
+        })
+        //添加购物车
+    $('.js-add-cart').click(function(e) {
+        e.stopPropagation();
+        var number = Number($(this).parents("tr").find(".priceInput").val());
+        var productimg = $(this).parents("tr").find(".proimg").children("img"),
+            imgsrc = productimg.attr("src"),
+            x = productimg.offset().left + 30,
+            y = productimg.offset().top - 10,
+            X = $(".js-shopping-cart").offset().left,
+            Y = $(".js-shopping-cart").offset().top;
+        if ($('#flydiv').length <= 0) {
+            $('body').append('<div id="flydiv"><img src="' + imgsrc + '" width="50" height="50" /></div');
+        };
+        var $obj = $('#flydiv');
+        if (!$obj.is(':animated')) {
+            $obj.css({ 'left': x, 'top': y }).animate({ 'left': X, 'top': Y - 80 }, 500, function() {
+                $obj.stop(false, false).animate({ 'top': Y - 20, 'opacity': 0 }, 500, function() {
+                    $obj.fadeOut(300, function() {
+                        $obj.remove();
+                        var num = Number($(".cartnums").text());
+                        $(".cartnums").text(num + number);
+                        $(".cartnums").show();
+                    });
+                });
+            });
+        };
     })
 });
 //购物车总价计算-shopping
@@ -275,15 +304,15 @@ $(document).ready(function() {
     });
     /*删除-单个删除*/
     $('.js-del-one').click(function() {
-        var minusprice = parseInt($(this).parents('tr').find('.js-price').text());
-        _total = _total - minusprice;
-        $('#js-totle').html('总价：' + _total);
-        $(this).parents("tr").remove();
-        if ($('.prolisttable tr').length - 1 == 1) {
-            $('input.js-sel-all').iCheck('uncheck');
-        }
-    })
-    /*批量删除*/
+            var minusprice = parseInt($(this).parents('tr').find('.js-price').text());
+            _total = _total - minusprice;
+            $('#js-totle').html('总价：' + _total);
+            $(this).parents("tr").remove();
+            if ($('.prolisttable tr').length - 1 == 1) {
+                $('input.js-sel-all').iCheck('uncheck');
+            }
+        })
+        /*批量删除*/
     $('.js-del-more').click(function() {
         $("input.listinput[type='checkbox']:checked").each(function() {
             $(this).parents("tr").remove();
@@ -503,3 +532,41 @@ $(document).ready(function() {
     window.TableOrderOper = _api;
     //#endregion
 })();
+//菜单点击改鼠标经过
+;
+(function($, window, undefined) {
+    // outside the scope of the jQuery plugin to
+    // keep track of all dropdowns
+    var $allDropdowns = $();
+    // if instantlyCloseOthers is true, then it will instantly
+    // shut other nav items when a new one is hovered over
+    $.fn.dropdownHover = function(options) {
+        // the element we really care about
+        // is the dropdown-toggle's parent
+        $allDropdowns = $allDropdowns.add(this.parent());
+        return this.each(function() {
+            var $this = $(this).parent(),
+                defaults = {
+                    delay: 500,
+                    instantlyCloseOthers: true
+                },
+                data = {
+                    delay: $(this).data('delay'),
+                    instantlyCloseOthers: $(this).data('close-others')
+                },
+                options = $.extend(true, {}, defaults, options, data),
+                timeout;
+            $this.hover(function() {
+                if (options.instantlyCloseOthers === true)
+                    $allDropdowns.removeClass('open');
+                window.clearTimeout(timeout);
+                $(this).addClass('open');
+            }, function() {
+                timeout = window.setTimeout(function() {
+                    $this.removeClass('open');
+                }, options.delay);
+            });
+        });
+    };
+    $('[data-hover="dropdown"]').dropdownHover();
+})(jQuery, this);

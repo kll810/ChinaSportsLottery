@@ -1470,7 +1470,7 @@ body {
     background: url(../img/menuicon-min.png) -86px 0;
     margin-right: 10px;
 }
-.i-f-ser {
+.i-f-dis {
     background-position: -115px 0;
 }
 .i-f-sur {
@@ -2026,7 +2026,8 @@ body {
     box-shadow: none
 }
 .L-form-line input:focus {
-    box-shadow: none;
+    box-shadow: none !important;
+    border-color: none !important
 }
 .L-form-line.user {
     background: url(../img/user.png) 12px 12px no-repeat;
@@ -2439,6 +2440,7 @@ input[type="color"]:focus,
     width: 22px;
     height: 22px;
     background: url(../img/icon2.png) center 5px no-repeat;
+    cursor: pointer;
 }
 .collecticon.active {
     background-position: 0 -29px;
@@ -2447,6 +2449,7 @@ input[type="color"]:focus,
     display: inline-block;
     width: 22px;
     height: 22px;
+    cursor: pointer;
     background: url(../img/icon2.png) center -67px no-repeat;
 }
 .shoppingicon.active {
@@ -3661,4 +3664,8 @@ table.table .text-left {
 .faqi5{
     background-position: -82px -53px;
     height: 21px;
+}
+#flydiv{
+    position: absolute;
+    z-index: 100;
 }
