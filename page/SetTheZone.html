@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>中国体育彩票-我的收藏</title>
+    <title>中国体育彩票-套餐专区</title>
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
@@ -117,168 +117,282 @@
         </div>
     </div>
     <!-- 内容 -->
-    <div class="container pr listcon">
+    <div class="container pr listcon scrollcontainer">
+        <!-- 右侧浮动菜单 -->
+        <div class="pinned">
+            <div class="listsidertools">
+                <a href="shopping.html" class="js-shopping-cart">
+                    <i class="fa fa-shopping-cart"></i>
+                    <div>购物车</div>
+                    <b class="cartnums">2</b>
+                </a>
+                <a href="#">
+                    <i class="fa fa-chevron-up"></i>
+                    <div>顶部</div>
+                </a>
+            </div>
+        </div>
         <!-- 页面标题+面包屑导航 -->
         <h1 class="pagetitle">
-            我的收藏
+            套餐专区
             <div class="pull-right f14">
-                当前位置：订票中心><span class="font-org">我的收藏</span>
+                当前位置：订票中心><span class="font-org">套餐专区</span>
             </div>
         </h1>
-        <table class="table prolisttable">
+        <div class="sztitle">
+            <div class="font-org f18">套餐一</div>
+        </div>
+        <table class="table prolisttable mb0">
             <thead>
                 <tr>
-                    <th width="110">
-                        彩票编号
-                    </th>
-                    <th class="text-left">游戏</th>
-                    <th>面值(元)</th>
-                    <th>每包金额(元)</th>
-                    <th width="115">收藏时间</th>
+                    <th>游戏名称</th>
+                    <th>每包金额</th>
+                    <th>订购包数</th>
+                    <th>合计(元)</th>
+                    <th>订单总金额</th>
                     <th>操作</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        0345
-                    </td>
                     <td class="text-left">
-                        <a href="proinfo.html">
+                        <a href="proinfo.html" class="ml20">
                             <span class="proimg">
                                 <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
                             </span>
                             <span class="protitle">天下名钻</span>
                         </a>
                     </td>
-                    <td>5</td>
+                    <td _order="600">600元</td>
                     <td>
-                        600
+                        3包
                     </td>
-                    <td>2017-11-10</td>
-                    <td><a href="#" class="btn btn-warning w50 mr10">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn w50 btn-default js-del-one">删除</a></td>
+                    <td>
+                        1800元
+                    </td>
+                    <td rowspan="3" class="borderleft"><b class="font-org f16">1800元</b></td>
+                    <td rowspan="3" class="borderleft">
+                        <a href="#" class="btn btn-warning w100">去结算</a>
+                    </td>
                 </tr>
                 <tr>
-                    <td>
-                        0345
-                    </td>
                     <td class="text-left">
-                        <a href="proinfo.html">
+                        <a href="proinfo.html" class="ml20">
                             <span class="proimg">
                                 <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
                             </span>
                             <span class="protitle">天下名钻</span>
                         </a>
                     </td>
-                    <td>5</td>
+                    <td _order="600">600元</td>
                     <td>
-                        600
+                        3包
                     </td>
-                    <td>2017-11-10</td>
-                    <td><a href="#" class="btn btn-warning w50 mr10">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn btn-default js-del-one w50">删除</a></td>
+                    <td>
+                        1800元
+                    </td>
                 </tr>
                 <tr>
-                    <td>
-                        0345
-                    </td>
                     <td class="text-left">
-                        <a href="proinfo.html">
+                        <a href="proinfo.html" class="ml20">
                             <span class="proimg">
                                 <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
                             </span>
                             <span class="protitle">天下名钻</span>
                         </a>
                     </td>
-                    <td>5</td>
+                    <td _order="600">600元</td>
                     <td>
-                        600
+                        3包
                     </td>
-                    <td>2017-11-10</td>
-                    <td><a href="#" class="btn btn-warning mr10 w50">购买</a><a href="#myModal" role="button" data-toggle="modal" class="btn btn-default w50 js-del-one">删除</a></td>
+                    <td>
+                        1800元
+                    </td>
                 </tr>
             </tbody>
         </table>
-        <!-- 热点推荐 -->
-        <div class="mt10 listw190 text-center ">
-            <h3 class="list-boxtitle"><b>热点推荐</b></h3>
-            <div class="box">
-                <span class="prev"><i class="fa fa-chevron-left"></i></span>
-                <dl id="roll">
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+        <div class="sztitle">
+            <div class="font-org f18">套餐二</div>
+        </div>
+        <table class="table prolisttable mb0">
+            <thead>
+                <tr>
+                    <th>游戏名称</th>
+                    <th>每包金额</th>
+                    <th>订购包数</th>
+                    <th>合计(元)</th>
+                    <th>订单总金额</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                    <td rowspan="3" class="borderleft"><b class="font-org f16">1800元</b></td>
+                    <td rowspan="3" class="borderleft">
+                        <a href="#" class="btn btn-warning w100">去结算</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="sztitle">
+            <div class="font-org f18">套餐三</div>
+        </div>
+        <table class="table prolisttable mb0">
+            <thead>
+                <tr>
+                    <th>游戏名称</th>
+                    <th>每包金额</th>
+                    <th>订购包数</th>
+                    <th>合计(元)</th>
+                    <th>订单总金额</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                    <td rowspan="3" class="borderleft"><b class="font-org f16">1800元</b></td>
+                    <td rowspan="3" class="borderleft">
+                        <a href="#" class="btn btn-warning w100">去结算</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-left">
+                        <a href="proinfo.html" class="ml20">
+                            <span class="proimg">
+                                <img src="img/tmp/645343.png" width='0' height='0' onload="AutoSize(this,90,90)">
+                                <i class="fa fa-search btn-preview"></i>
+                                <div class="img-preview-box">
+                                    <img src="img/tmp/645343.png" width='300'>
+                                </div>
+                            </span>
+                            <span class="protitle">天下名钻</span>
                         </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/46.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/54.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
-                        </a>
-                    </dd>
-                    <dd>
-                        <a href="#">
-                            <div class="img"><img src="img/tmp/78.png" width='0' height='0' onload="AutoSize(this,140,140)"></div>
-                            <p>点石成金</p>
-                            <div>推荐指数 <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
-                            <div class="lighttip">中奖率80%</div>
-                        </a>
-                    </dd>
-                </dl>
-                <span class="next"><i class="fa fa-chevron-right"></i></span>
-            </div>
+                    </td>
+                    <td _order="600">600元</td>
+                    <td>
+                        3包
+                    </td>
+                    <td>
+                        1800元
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="text-center pt20 pb20">
+            显示1至10项结果，共20项
         </div>
     </div>
     <!-- 底部 -->
@@ -405,38 +519,19 @@
             </div>
         </div>
     </div>
-    <!-- Modal-删除提示 -->
-    <div id="myModal" class="modal hide fade modal-smll" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-        <div class="modal-body">
-            <h4 class="text-center mt0">提示<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button></h4>
-            
-            <p class="text-center p25">
-                <span class="vm f16">确定要删除该产品么？</span>
-            </p>
-            <div class="text-center p20">
-                <a class="btn btn-yellow btn-md w100 js-close-modal mr20" href="collect-null.html">确定</a>
-                <a class="btn btn-warning btn-md w100 js-close-modal" href="#">取消</a>
-            </div>
-        </div>
-    </div>
     <!-- js引用部分↓ -->
     <!-- jQuery通用库 -->
     <script src="js/jquery.min.js"></script>
     <!-- bootstrap-js -->
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.pin.js"></script>
     <!-- ui新建js-js -->
     <script src="js/plugins.js"></script>
-    
+    <script src="js/ZhCN_Pinyin.min.js" type="text/javascript"></script>
     <script>
     $(document).ready(function() {
-        $("#roll").parallelRoll({
-            amount: 1,
-            direction: 'left',
-            prev: 'next',
-            //向上
-            next: 'prev',
-            //向下
-            time: 10000,
+        $(".pinned").pin({
+            containerSelector: ".scrollcontainer"
         });
     });
     </script>

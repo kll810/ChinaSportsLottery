@@ -8,6 +8,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.css" rel="stylesheet">
     <link href="css/font-awesome.css" rel="stylesheet">
+    <!-- 视频播放器 -->
+    <link href="css/video-js.css" rel="stylesheet">
     <!-- 页面基础样式 -->
     <link href="css/uiStyle.css" rel="stylesheet">
 </head>
@@ -252,6 +254,23 @@
             </div>
         </div>
     </div>
+    <!-- 视频 -->
+    <div id="myModal" class="modal hide fade modal-lg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true" style="position:absolute; right:10px;top:10px;z-index: 1000;color: #fff;">×</button>
+            <div>
+                <video id="my-video" class="video-js" controls preload="auto" width="800" height="550" data-setup="{}">
+                    <source src="http://vjs.zencdn.net/v/oceans.mp4" type="video/mp4">
+                    <source src="http://vjs.zencdn.net/v/oceans.webm" type="video/webm">
+                    <source src="http://vjs.zencdn.net/v/oceans.ogv" type="video/ogg">
+                    <p class="vjs-no-js">
+                        To view this video please enable JavaScript, and consider upgrading to a web browser that
+                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                    </p>
+                </video>
+            </div>
+        </div>
+    </div>
     <!-- js引用部分↓ -->
     <!-- jQuery通用库 -->
     <script src="js/jquery.min.js"></script>
@@ -259,6 +278,16 @@
     <script src="js/bootstrap.min.js"></script>
     <!-- ui新建js-js -->
     <script src="js/plugins.js"></script>
+    <!-- If you'd like to support IE8 -->
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-ie8.min.js"></script>
+    <script type="text/javascript">
+    var myPlayer = videojs('my-video');
+    videojs("my-video").ready(function() {
+        var myPlayer = this;
+        myPlayer.play();
+    });
+    </script>
     <!-- js引用部分↑ -->
 </body>
 
